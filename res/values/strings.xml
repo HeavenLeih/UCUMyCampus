@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">UCU MyCampus</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_menu_campus">MenuCampus</string>
+    <string name="title_activity_map_campus">MapCampus</string>
+    <string name="title_activity_location_campus">LocationCampus</string>
+    <string name="title_activity_history_campus">HistoryCampus</string>
+    <string name="title_activity_direction_campus">DirectionCampus</string>
+
+</resources>

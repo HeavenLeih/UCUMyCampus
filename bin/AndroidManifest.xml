@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="edu.ucuccs.ucumycampus"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="19" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MenuCampus"
+            android:label="@string/title_activity_menu_campus" >
+        </activity>
+        <activity
+            android:name=".MapCampus"
+            android:label="@string/title_activity_map_campus" >
+        </activity>
+        <activity
+            android:name=".LocationCampus"
+            android:label="@string/title_activity_location_campus" >
+        </activity>
+        <activity
+            android:name=".HistoryCampus"
+            android:label="@string/title_activity_history_campus" >
+        </activity>
+        <activity
+            android:name=".DirectionCampus"
+            android:label="@string/title_activity_direction_campus" >
+        </activity>
+    </application>
+
+</manifest>
