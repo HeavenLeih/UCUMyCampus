@@ -2,22 +2,53 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#25E15D"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="edu.ucuccs.ucumycampus.LocationCampus" >
 
-<TextView
+    <TextView
+        android:id="@+id/textView1"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="" />
- 
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@+id/textView1"
+        android:src="@drawable/ucu" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView1"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/line" />
+
     <edu.ucuccs.ucumycampus.CustomAutoCompleteView
         android:id="@+id/myautocomplete"
-        android:layout_width="fill_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:completionThreshold="1" >
-    </edu.ucuccs.ucumycampus.CustomAutoCompleteView>
+        android:layout_alignLeft="@+id/imageView2"
+        android:layout_alignRight="@+id/imageView2"
+        android:layout_below="@+id/imageView2"
+        android:layout_marginTop="50dp"
+        android:background="#FFFFFF"
+        android:completionThreshold="1"
+        android:hint="  Search Location Here" />
+
+    <ImageView
+        android:id="@+id/btnSearchLoc"
+        android:layout_width="50dip"
+        android:layout_height="50dip"
+        android:layout_alignRight="@+id/myautocomplete"
+        android:layout_below="@+id/imageView2"
+        android:src="@drawable/btnsearch" />
 
 </RelativeLayout>

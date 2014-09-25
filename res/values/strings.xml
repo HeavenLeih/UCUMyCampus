@@ -9,5 +9,6 @@
     <string name="title_activity_location_campus">LocationCampus</string>
     <string name="title_activity_history_campus">HistoryCampus</string>
     <string name="title_activity_direction_campus">DirectionCampus</string>
+    <string name="title_activity_honnasan_hall_campus">HonnasanHallCampus</string>
 
 </resources>
