@@ -11,6 +11,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class LocationCampus extends Activity {
 
@@ -19,6 +20,7 @@ public class LocationCampus extends Activity {
 	 * since we are extending to customize the view and disable filter The same
 	 * with the XML view, type will be CustomAutoCompleteView
 	 */
+	DBAdapter dbcon = new DBAdapter(this);
 	CustomAutoCompleteView myAutoComplete;
 
 	// adapter for auto-complete
@@ -27,6 +29,9 @@ public class LocationCampus extends Activity {
 	// for database operations
 	DatabaseHandler databaseH;
 	ImageView btnSearchLoc;
+
+	String locationD;
+	Integer lid;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -45,21 +50,53 @@ public class LocationCampus extends Activity {
 			// autocompletetextview is in activity_main.xml
 			myAutoComplete = (CustomAutoCompleteView) findViewById(R.id.myautocomplete);
 			btnSearchLoc = (ImageView) findViewById(R.id.btnSearchLoc);
-
-			
-			btnSearchLoc.setOnClickListener(new OnClickListener(){
+			btnSearchLoc.setOnClickListener(new OnClickListener() {
 
 				@Override
 				public void onClick(View arg0) {
 					// TODO Auto-generated method stub
-					if (myAutoComplete.getText().toString().equals("HONNASAN HALL")){
-						Intent HonnasanGo = new Intent(LocationCampus.this,
-								HonnasanHallCampus.class);
-						startActivity(HonnasanGo);
+					// locationD = myAutoComplete.getText().toString();
+					dbcon.open();
+
+					long consave = dbcon.method_savecon(myAutoComplete
+							.getText().toString());
+
+					if (consave > 0) {
+
+						Toast.makeText(getApplicationContext(), "SAVED IN HISTORY",
+								Toast.LENGTH_LONG).show();
+
+						if (myAutoComplete.getText().toString()
+								.equals("HONNASAN HALL")) {
+							Intent HonnasanGo = new Intent(LocationCampus.this,
+									HonnasanHallCampus.class);
+							startActivity(HonnasanGo);
+						}
+						
+						else if (myAutoComplete.getText().toString()
+								.equals("BADAR BUILDING")) {
+							Intent HonnasanGo = new Intent(LocationCampus.this,
+									BadarBuildingCampus.class);
+							startActivity(HonnasanGo);
+						}
+						
+						else if (myAutoComplete.getText().toString()
+								.equals("NEW BUILDING")) {
+							Intent HonnasanGo = new Intent(LocationCampus.this,
+									NewBuildingCampus.class);
+							startActivity(HonnasanGo);
+						}
+
+
+
+					} else {
+
+						Toast.makeText(getApplicationContext(), "NOT SAVED",
+								Toast.LENGTH_LONG).show();
 					}
-					
-				}});
-			
+					dbcon.close();
+				}
+			});
 			myAutoComplete.setOnItemClickListener(new OnItemClickListener() {
 
 				@Override

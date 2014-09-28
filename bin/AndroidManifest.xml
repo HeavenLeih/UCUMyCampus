@@ -46,6 +46,14 @@
             android:name=".HonnasanHallCampus"
             android:label="@string/title_activity_honnasan_hall_campus" >
         </activity>
+        <activity
+            android:name=".BadarBuildingCampus"
+            android:label="@string/title_activity_badar_building_campus" >
+        </activity>
+        <activity
+            android:name=".NewBuildingCampus"
+            android:label="@string/title_activity_new_building_campus" >
+        </activity>
     </application>
 
 </manifest>

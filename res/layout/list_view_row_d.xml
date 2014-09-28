@@ -4,13 +4,19 @@
     android:padding="10dp" >
  
     <TextView
-        android:id="@+id/textViewItem"
+        android:id="@+id/textViewItemD"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:text="Item name here..."
         android:textSize="15dp" />
     
-    
+        <TextView
+        android:id="@+id/textViewItemD1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:text="Item name here..."
+        android:textSize="15dp" />
  
 </RelativeLayout>

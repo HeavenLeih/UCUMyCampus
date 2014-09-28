@@ -5,12 +5,12 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
 
-public class CustomAutoCompleteTextChangedListener implements TextWatcher {
+public class CustomAutoCompleteTextChangedListenerD implements TextWatcher {
 
-	public static final String TAG = "CustomAutoCompleteTextChangedListener.java";
+	public static final String TAG = "CustomAutoCompleteTextChangedListenerD.java";
 	Context context;
 
-	public CustomAutoCompleteTextChangedListener(Context context) {
+	public CustomAutoCompleteTextChangedListenerD(Context context) {
 		this.context = context;
 	}
 
@@ -36,19 +36,21 @@ public class CustomAutoCompleteTextChangedListener implements TextWatcher {
 			// if you want to see in the logcat what the user types
 			Log.e(TAG, "User input: " + userInput);
 
-			LocationCampus locationCamp = ((LocationCampus) context);
+			DirectionCampus directionCamp = ((DirectionCampus) context);
 
 			// update the adapater
-			locationCamp.myAdapter.notifyDataSetChanged();
+			directionCamp.myAdapterD.notifyDataSetChanged();
 
 			// get suggestions from the database
-			MyObject[] myObjs = locationCamp.databaseH.read(userInput
+			MyObjectD[] myObjsD = directionCamp.databaseH.readD(userInput
 					.toString());
 
 			// update the adapter
-			locationCamp.myAdapter = new AutocompleteCustomArrayAdapter(
-					locationCamp, R.layout.list_view_row, myObjs);
-			locationCamp.myAutoComplete.setAdapter(locationCamp.myAdapter);
+			directionCamp.myAdapterD = new AutocompleteCustomArrayAdapterD(
+					directionCamp, R.layout.list_view_row_d, myObjsD);
+			directionCamp.myAutoCompleteDir.setAdapter(directionCamp.myAdapterD);
+
+			directionCamp.myAutoCompleteLoc.setAdapter(directionCamp.myAdapterD);
 
 		} catch (NullPointerException e) {
 			e.printStackTrace();

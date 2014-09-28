@@ -140,7 +140,7 @@ public class MenuCampus extends Activity {
 
 		case ALERT_DIALOG4Dir:
 			builder = new AlertDialog.Builder(this);
-			builder.setMessage("HISTORY\nIt shows the Map of UCU Campus!\nPress OK to go to Direction")
+			builder.setMessage("DIRECTION\nIt shows the Map of UCU Campus!\nPress OK to go to Direction")
 					.setCancelable(false)
 					.setPositiveButton("OK",
 							new DialogInterface.OnClickListener() {

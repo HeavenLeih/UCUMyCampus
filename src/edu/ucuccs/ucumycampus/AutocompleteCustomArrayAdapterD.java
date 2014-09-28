@@ -8,25 +8,25 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
-public class AutocompleteCustomArrayAdapter extends ArrayAdapter<MyObject> {
+public class AutocompleteCustomArrayAdapterD extends ArrayAdapter<MyObjectD> {
 
 	public class DBAdapter {
 
 	}
 
-	final String TAG = "AutocompleteCustomArrayAdapter.java";
+	final String TAG = "AutocompleteCustomArrayAdapterD.java";
 
-	Context mContext;
-	int layoutResourceId;
-	MyObject data[] = null;
+	Context mContextD;
+	int layoutResourceIdD;
+	MyObjectD data[] = null;
 
-	public AutocompleteCustomArrayAdapter(Context mContext,
-			int layoutResourceId, MyObject[] data) {
+	public AutocompleteCustomArrayAdapterD(Context mContextD,
+			int layoutResourceIdD, MyObjectD[] data) {
 
-		super(mContext, layoutResourceId, data);
+		super(mContextD, layoutResourceIdD, data);
 
-		this.layoutResourceId = layoutResourceId;
-		this.mContext = mContext;
+		this.layoutResourceIdD = layoutResourceIdD;
+		this.mContextD = mContextD;
 		this.data = data;
 	}
 
@@ -46,25 +46,34 @@ public class AutocompleteCustomArrayAdapter extends ArrayAdapter<MyObject> {
 			 */
 			if (convertView == null) {
 				// inflate the layout
-				LayoutInflater inflater = ((LocationCampus) mContext)
+				LayoutInflater inflater = ((DirectionCampus) mContextD)
 						.getLayoutInflater();
 
-				convertView = inflater.inflate(layoutResourceId, parent, false);
+				convertView = inflater.inflate(layoutResourceIdD, parent,
+						false);
 
 			}
 
 			// object item based on the position
-			MyObject objectItem = data[position];
+			MyObjectD objectItemD = data[position];
 
 			// get the TextView and then set the text (item name) and tag (item
 			// ID) values
-			TextView textViewItem = (TextView) convertView
-					.findViewById(R.id.textViewItem);
-			textViewItem.setText(objectItem.objectName);
+			TextView textViewItemD = (TextView) convertView
+					.findViewById(R.id.textViewItemD);
+			textViewItemD.setText(objectItemD.objectNameD);
 
+			
+			TextView textViewItemD1 = (TextView) convertView
+					.findViewById(R.id.textViewItemD1);
+			textViewItemD1.setText(objectItemD.objectNameD);
+			
 			// in case you want to add some style, you can do something like:
-			textViewItem.setBackgroundColor(Color.BLUE);
-			textViewItem.setTextColor(Color.WHITE);
+			textViewItemD.setBackgroundColor(Color.BLUE);
+			textViewItemD.setTextColor(Color.WHITE);
+			
+			textViewItemD1.setBackgroundColor(Color.BLUE);
+			textViewItemD1.setTextColor(Color.WHITE);
 
 			// #3C88FA
 
