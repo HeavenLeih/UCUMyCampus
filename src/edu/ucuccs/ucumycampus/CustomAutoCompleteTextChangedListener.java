@@ -48,6 +48,7 @@ public class CustomAutoCompleteTextChangedListener implements TextWatcher {
 			// update the adapter
 			locationCamp.myAdapter = new AutocompleteCustomArrayAdapter(
 					locationCamp, R.layout.list_view_row, myObjs);
+
 			locationCamp.myAutoComplete.setAdapter(locationCamp.myAdapter);
 
 		} catch (NullPointerException e) {

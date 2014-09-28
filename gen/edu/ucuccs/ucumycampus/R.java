@@ -34,25 +34,20 @@ public final class R {
         public static final int ucu=0x7f020009;
     }
     public static final class id {
-        public static final int action_settings=0x7f080012;
-        public static final int btnBegin=0x7f080010;
-        public static final int btnClearLoc=0x7f080007;
-        public static final int btnDirection=0x7f08000b;
-        public static final int btnGetDirection=0x7f080005;
-        public static final int btnHistory=0x7f08000a;
-        public static final int btnLocation=0x7f08000c;
-        public static final int btnMap=0x7f08000d;
-        public static final int btnSearchLoc=0x7f080009;
+        public static final int action_settings=0x7f08000d;
+        public static final int btnBegin=0x7f08000b;
+        public static final int btnDirection=0x7f080006;
+        public static final int btnHistory=0x7f080005;
+        public static final int btnLocation=0x7f080007;
+        public static final int btnMap=0x7f080008;
+        public static final int btnSearchLoc=0x7f080004;
         public static final int imageView1=0x7f080001;
         public static final int imageView2=0x7f080002;
-        public static final int imageView3=0x7f08000e;
-        public static final int imageView4=0x7f08000f;
-        public static final int myListLoc=0x7f080006;
-        public static final int myautocomplete=0x7f080008;
-        public static final int myautocompleteDir=0x7f080003;
-        public static final int myautocompleteLoc=0x7f080004;
+        public static final int imageView3=0x7f080009;
+        public static final int imageView4=0x7f08000a;
+        public static final int myautocomplete=0x7f080003;
         public static final int textView1=0x7f080000;
-        public static final int textViewItem=0x7f080011;
+        public static final int textViewItem=0x7f08000c;
     }
     public static final class layout {
         public static final int act_direction_campus=0x7f030000;

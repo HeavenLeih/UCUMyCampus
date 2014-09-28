@@ -10,7 +10,5 @@
         android:layout_alignParentTop="true"
         android:text="Item name here..."
         android:textSize="15dp" />
-    
-    
  
 </RelativeLayout>

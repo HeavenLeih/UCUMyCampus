@@ -10,10 +10,6 @@ import android.widget.TextView;
 
 public class AutocompleteCustomArrayAdapter extends ArrayAdapter<MyObject> {
 
-	public class DBAdapter {
-
-	}
-
 	final String TAG = "AutocompleteCustomArrayAdapter.java";
 
 	Context mContext;
@@ -48,9 +44,7 @@ public class AutocompleteCustomArrayAdapter extends ArrayAdapter<MyObject> {
 				// inflate the layout
 				LayoutInflater inflater = ((LocationCampus) mContext)
 						.getLayoutInflater();
-
 				convertView = inflater.inflate(layoutResourceId, parent, false);
-
 			}
 
 			// object item based on the position
@@ -65,7 +59,7 @@ public class AutocompleteCustomArrayAdapter extends ArrayAdapter<MyObject> {
 			// in case you want to add some style, you can do something like:
 			textViewItem.setBackgroundColor(Color.BLUE);
 			textViewItem.setTextColor(Color.WHITE);
-
+			
 			// #3C88FA
 
 			// CYAN
