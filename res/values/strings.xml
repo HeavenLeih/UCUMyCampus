@@ -12,7 +12,5 @@
     <string name="title_activity_honnasan_hall_campus">HonnasanHallCampus</string>
     <string name="title_activity_badar_building_campus">BadarBuildingCampus</string>
     <string name="title_activity_new_building_campus">NewBuildingCampus</string>
-    <string name="title_activity_history">History</string>
-    <string name="title_activity_direction_history">DirectionHistory</string>
 
 </resources>

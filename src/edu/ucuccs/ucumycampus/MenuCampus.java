@@ -124,7 +124,7 @@ public class MenuCampus extends Activity {
 										int id) {
 									Intent HistoryGo = new Intent(
 											MenuCampus.this,
-											History.class);
+											HistoryCampus.class);
 									startActivity(HistoryGo);
 								}
 							})
