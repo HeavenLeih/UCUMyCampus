@@ -34,59 +34,51 @@ public final class R {
         public static final int ucu=0x7f020009;
     }
     public static final class id {
-        public static final int action_settings=0x7f080018;
-        public static final int btnBegin=0x7f080014;
-        public static final int btnClearDir=0x7f080007;
-        public static final int btnClearLoc=0x7f08000b;
-        public static final int btnDirection=0x7f08000f;
+        public static final int action_settings=0x7f080014;
+        public static final int btnBegin=0x7f080010;
+        public static final int btnClearLoc=0x7f080007;
+        public static final int btnDirection=0x7f08000b;
         public static final int btnGetDirection=0x7f080005;
-        public static final int btnHistory=0x7f08000e;
-        public static final int btnHistoryDir=0x7f080009;
-        public static final int btnHistoryLoc=0x7f080008;
-        public static final int btnLocation=0x7f080010;
-        public static final int btnMap=0x7f080011;
-        public static final int btnSearchLoc=0x7f08000d;
+        public static final int btnHistory=0x7f08000a;
+        public static final int btnLocation=0x7f08000c;
+        public static final int btnMap=0x7f08000d;
+        public static final int btnSearchLoc=0x7f080009;
         public static final int imageView1=0x7f080001;
         public static final int imageView2=0x7f080002;
-        public static final int imageView3=0x7f080012;
-        public static final int imageView4=0x7f080013;
-        public static final int myListDir=0x7f080006;
-        public static final int myListLoc=0x7f08000a;
-        public static final int myautocomplete=0x7f08000c;
+        public static final int imageView3=0x7f08000e;
+        public static final int imageView4=0x7f08000f;
+        public static final int myListLoc=0x7f080006;
+        public static final int myautocomplete=0x7f080008;
         public static final int myautocompleteDir=0x7f080003;
         public static final int myautocompleteLoc=0x7f080004;
         public static final int textView1=0x7f080000;
-        public static final int textViewItem=0x7f080015;
-        public static final int textViewItemD=0x7f080016;
-        public static final int textViewItemD1=0x7f080017;
+        public static final int textViewItem=0x7f080011;
+        public static final int textViewItemD=0x7f080012;
+        public static final int textViewItemD1=0x7f080013;
     }
     public static final class layout {
         public static final int act_badar_building_campus=0x7f030000;
         public static final int act_direction_campus=0x7f030001;
-        public static final int act_direction_history=0x7f030002;
-        public static final int act_history=0x7f030003;
-        public static final int act_history_campus=0x7f030004;
-        public static final int act_honnasan_hall_campus=0x7f030005;
-        public static final int act_location_campus=0x7f030006;
-        public static final int act_map_campus=0x7f030007;
-        public static final int act_menu_campus=0x7f030008;
-        public static final int act_new_building_campus=0x7f030009;
-        public static final int activity_main=0x7f03000a;
-        public static final int list_view_row=0x7f03000b;
-        public static final int list_view_row_d=0x7f03000c;
+        public static final int act_history_campus=0x7f030002;
+        public static final int act_honnasan_hall_campus=0x7f030003;
+        public static final int act_location_campus=0x7f030004;
+        public static final int act_map_campus=0x7f030005;
+        public static final int act_menu_campus=0x7f030006;
+        public static final int act_new_building_campus=0x7f030007;
+        public static final int activity_main=0x7f030008;
+        public static final int list_view_row=0x7f030009;
+        public static final int list_view_row_d=0x7f03000a;
     }
     public static final class menu {
         public static final int badar_building_campus=0x7f070000;
         public static final int direction_campus=0x7f070001;
-        public static final int direction_history=0x7f070002;
-        public static final int history=0x7f070003;
-        public static final int history_campus=0x7f070004;
-        public static final int honnasan_hall_campus=0x7f070005;
-        public static final int location_campus=0x7f070006;
-        public static final int main=0x7f070007;
-        public static final int map_campus=0x7f070008;
-        public static final int menu_campus=0x7f070009;
-        public static final int new_building_campus=0x7f07000a;
+        public static final int history_campus=0x7f070002;
+        public static final int honnasan_hall_campus=0x7f070003;
+        public static final int location_campus=0x7f070004;
+        public static final int main=0x7f070005;
+        public static final int map_campus=0x7f070006;
+        public static final int menu_campus=0x7f070007;
+        public static final int new_building_campus=0x7f070008;
     }
     public static final class string {
         public static final int action_settings=0x7f050002;
@@ -94,8 +86,6 @@ public final class R {
         public static final int hello_world=0x7f050001;
         public static final int title_activity_badar_building_campus=0x7f050009;
         public static final int title_activity_direction_campus=0x7f050007;
-        public static final int title_activity_direction_history=0x7f05000c;
-        public static final int title_activity_history=0x7f05000b;
         public static final int title_activity_history_campus=0x7f050006;
         public static final int title_activity_honnasan_hall_campus=0x7f050008;
         public static final int title_activity_location_campus=0x7f050005;
