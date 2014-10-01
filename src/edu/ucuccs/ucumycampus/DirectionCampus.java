@@ -1,13 +1,17 @@
 package edu.ucuccs.ucumycampus;
 
-import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class DirectionCampus extends Activity {
 
@@ -16,6 +20,8 @@ public class DirectionCampus extends Activity {
 	 * since we are extending to customize the view and disable filter The same
 	 * with the XML view, type will be CustomAutoCompleteView
 	 */
+
+	DBAdapter dbcon = new DBAdapter(this);
 	CustomAutoCompleteView myAutoCompleteDir, myAutoCompleteLoc;
 
 	// adapter for auto-complete
@@ -23,6 +29,7 @@ public class DirectionCampus extends Activity {
 
 	// for database operations
 	DatabaseHandler databaseH;
+	Button btnGetDirection;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +48,35 @@ public class DirectionCampus extends Activity {
 			// autocompletetextview is in activity_main.xml
 			myAutoCompleteDir = (CustomAutoCompleteView) findViewById(R.id.myautocompleteDir);
 			myAutoCompleteLoc = (CustomAutoCompleteView) findViewById(R.id.myautocompleteLoc);
+			btnGetDirection = (Button) findViewById(R.id.btnGetDirection);
+			
+			btnGetDirection.setOnClickListener(new OnClickListener(){
 
+				@Override
+				public void onClick(View arg0) {
+					// TODO Auto-generated method stub
+					
+					dbcon.open();
+
+					long consave = dbcon.method_savecondir(myAutoCompleteDir
+							.getText().toString(),myAutoCompleteLoc.getText().toString());
+
+					if (consave > 0) {
+
+						Toast.makeText(getApplicationContext(), "SAVED IN HISTORY",
+								Toast.LENGTH_LONG).show();
+
+						
+
+					} else {
+
+						Toast.makeText(getApplicationContext(), "NOT SAVED",
+								Toast.LENGTH_LONG).show();
+					}
+					dbcon.close();
+				}
+			});
+					
 			myAutoCompleteDir.setOnItemClickListener(new OnItemClickListener() {
 
 				@Override
@@ -55,7 +90,7 @@ public class DirectionCampus extends Activity {
 				}
 
 			});
-			
+
 			myAutoCompleteLoc.setOnItemClickListener(new OnItemClickListener() {
 
 				@Override
@@ -75,8 +110,8 @@ public class DirectionCampus extends Activity {
 					.addTextChangedListener(new CustomAutoCompleteTextChangedListenerD(
 							this));
 			myAutoCompleteLoc
-			.addTextChangedListener(new CustomAutoCompleteTextChangedListenerD(
-					this));
+					.addTextChangedListener(new CustomAutoCompleteTextChangedListenerD(
+							this));
 
 			// ObjectItemData has no value at first
 			MyObjectD[] ObjectItemDataD = new MyObjectD[0];
