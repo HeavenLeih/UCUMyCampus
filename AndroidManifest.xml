@@ -54,6 +54,158 @@
             android:name=".NewBuildingCampus"
             android:label="@string/title_activity_new_building_campus" >
         </activity>
+        <activity
+            android:name=".History"
+            android:label="@string/title_activity_history" >
+        </activity>
+        <activity
+            android:name=".DirectionHistory"
+            android:label="@string/title_activity_direction_history" >
+        </activity>
+        <activity
+            android:name=".Orata1Building"
+            android:label="@string/title_activity_orata1_building" >
+        </activity>
+        <activity
+            android:name=".Orata2Building"
+            android:label="@string/title_activity_orata2_building" >
+        </activity>
+        <activity
+            android:name=".Room1"
+            android:label="@string/title_activity_room1" >
+        </activity>
+        <activity
+            android:name=".Room2"
+            android:label="@string/title_activity_room2" >
+        </activity>
+        <activity
+            android:name=".Room3"
+            android:label="@string/title_activity_room3" >
+        </activity>
+        <activity
+            android:name=".Room4"
+            android:label="@string/title_activity_room4" >
+        </activity>
+        <activity
+            android:name=".Room5"
+            android:label="@string/title_activity_room5" >
+        </activity>
+        <activity
+            android:name=".Room6"
+            android:label="@string/title_activity_room6" >
+        </activity>
+        <activity
+            android:name=".Room7"
+            android:label="@string/title_activity_room7" >
+        </activity>
+        <activity
+            android:name=".Room8"
+            android:label="@string/title_activity_room8" >
+        </activity>
+        <activity
+            android:name=".Room9"
+            android:label="@string/title_activity_room9" >
+        </activity>
+        <activity
+            android:name=".Room10"
+            android:label="@string/title_activity_room10" >
+        </activity>
+        <activity
+            android:name=".Room11"
+            android:label="@string/title_activity_room11" >
+        </activity>
+        <activity
+            android:name=".NSTP_ROOM"
+            android:label="@string/title_activity_nstp__room" >
+        </activity>
+        <activity
+            android:name=".NSTP_ALUMNI_OFFICE"
+            android:label="@string/title_activity_nstp__alumni__office" >
+        </activity>
+        <activity
+            android:name=".GuidanceOffice"
+            android:label="@string/title_activity_guidance_office" >
+        </activity>
+        <activity
+            android:name=".OSAOffice"
+            android:label="@string/title_activity_osaoffice" >
+        </activity>
+        <activity
+            android:name=".AudioVisualRoom"
+            android:label="@string/title_activity_audio_visual_room" >
+        </activity>
+        <activity
+            android:name=".SupplyOffice"
+            android:label="@string/title_activity_supply_office" >
+        </activity>
+        <activity
+            android:name=".Room25"
+            android:label="@string/title_activity_room25" >
+        </activity>
+        <activity
+            android:name=".Room26"
+            android:label="@string/title_activity_room26" >
+        </activity>
+        <activity
+            android:name=".Room27"
+            android:label="@string/title_activity_room27" >
+        </activity>
+        <activity
+            android:name=".Room28"
+            android:label="@string/title_activity_room28" >
+        </activity>
+        <activity
+            android:name=".Room29"
+            android:label="@string/title_activity_room29" >
+        </activity>
+        <activity
+            android:name=".ACCRE_ROOM"
+            android:label="@string/title_activity_accre__room" >
+        </activity>
+        <activity
+            android:name=".TypingRoom"
+            android:label="@string/title_activity_typing_room" >
+        </activity>
+        <activity
+            android:name=".Room31"
+            android:label="@string/title_activity_room31" >
+        </activity>
+        <activity
+            android:name=".Baking_Room"
+            android:label="@string/title_activity_baking__room" >
+        </activity>
+        <activity
+            android:name=".CommercialCooking"
+            android:label="@string/title_activity_commercial_cooking" >
+        </activity>
+        <activity
+            android:name=".Room48"
+            android:label="@string/title_activity_room48" >
+        </activity>
+        <activity
+            android:name=".Room49"
+            android:label="@string/title_activity_room49" >
+        </activity>
+        <activity
+            android:name=".Room50"
+            android:label="@string/title_activity_room50" >
+        </activity>
+        <activity
+            android:name=".Room51"
+            android:label="@string/title_activity_room51" >
+        </activity>
+        <activity
+            android:name=".Room47A"
+            android:label="@string/title_activity_room47" >
+        </activity>
+        <activity
+            android:name=".Room47B"
+            android:label="@string/title_activity_room47_b" >
+        </activity>
+        <activity
+            android:name=".SocialWork"
+            android:label="@string/title_activity_social_work" >
+        </activity>
     </application>
 
 </manifest>

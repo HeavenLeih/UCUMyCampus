@@ -16,10 +16,16 @@ public class DBAdapter {
 	// field for contact table
 	static final String LOCID = "locid";
 	static final String LOCATIOND = "locationD";
+	
+	static final String DIRID = "dirid";
+	static final String DIRECTIOND = "directionD";
+		static final String DIRECTIONDLoc = "directionDLoc";
 
 	// table
 
-	static final String TABLE_NAME2 = "tbl_contact";
+	static final String TABLE_NAME2 = "tbl_location";
+
+	static final String TABLE_NAME3 = "tbl_direction";
 
 	// CREATE TABLE
 
@@ -27,6 +33,11 @@ public class DBAdapter {
 			+ LOCID + " integer primary key autoincrement, " + LOCATIOND
 			+ " varchar(255) not null )";
 
+	static final String DATABASE_CREATEDIR = "CREATE TABLE " + TABLE_NAME3 + " ( "
+			+ DIRID + " integer primary key autoincrement, " + DIRECTIOND
+			+ " varchar(255) not null, " + DIRECTIONDLoc
+			+ " varchar(255) not null )";
+	
 	// DBHELPER
 	final Context context;
 
@@ -51,6 +62,7 @@ public class DBAdapter {
 			try {
 
 				db.execSQL(DATABASE_CREATE);
+				db.execSQL(DATABASE_CREATEDIR);
 
 			} catch (SQLException e) {
 				e.printStackTrace();
@@ -63,6 +75,7 @@ public class DBAdapter {
 			// TODO Auto-generated method stub
 
 			db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME2);
+			db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME3);
 			onCreate(db);
 		}
 	}
@@ -84,6 +97,15 @@ public class DBAdapter {
 		return db.insert(TABLE_NAME2, null, initialValues);
 
 	}
+	
+	public long method_savecondir(String directionD, String directionDLoc) {
+		ContentValues initialValues = new ContentValues();
+		initialValues.put(DIRECTIOND, directionD);
+		initialValues.put(DIRECTIONDLoc, directionDLoc);
+		return db.insert(TABLE_NAME3, null, initialValues);
+
+	}
+
 
 	// SHOW ALL LOCATION RECORDS
 	public Cursor method_showallrecords() {
@@ -93,11 +115,26 @@ public class DBAdapter {
 
 	}
 
+	public Cursor method_showallrecordsdir() {
+		Cursor search_cursor = db.query(true, TABLE_NAME3, new String[] {
+				DIRID, DIRECTIOND,DIRECTIONDLoc }, null, null, null, null, null, null);
+		return search_cursor;
+
+	}
+	
 	// METHOD FOR SEARCH ID
 
 	public Cursor method_searchid(long cid) {
 		Cursor search_cursor = db.query(true, TABLE_NAME2, new String[] {
 				LOCID, LOCATIOND }, LOCID + "=" + cid + "", null, null, null,
+				null, null);
+		return search_cursor;
+	}
+	
+	
+	public Cursor method_searchiddir(long dircid) {
+		Cursor search_cursor = db.query(true, TABLE_NAME3, new String[] {
+				DIRID, DIRECTIOND,DIRECTIONDLoc  }, DIRID + "=" + dircid + "", null, null, null,
 				null, null);
 		return search_cursor;
 	}
@@ -118,6 +155,25 @@ public class DBAdapter {
 		if (c.moveToFirst()) {
 			do {
 				method_delete(c.getLong((int) rowId));
+			} while (c.moveToNext());
+		}
+		c.close();
+	}
+	
+	
+	//delete
+	public boolean method_deletedir(long dirid) {
+		return db.delete(TABLE_NAME3, DIRID + "=" + dirid + "", null) > 0;
+
+	}
+
+	public void method_deleteAlldir() {
+
+		Cursor c = method_showallrecordsdir();
+		long rowId = c.getColumnIndexOrThrow(DIRID);
+		if (c.moveToFirst()) {
+			do {
+				method_deletedir(c.getLong((int) rowId));
 			} while (c.moveToNext());
 		}
 		c.close();
