@@ -72,368 +72,61 @@ public class LocationCampus extends Activity {
 									HonnasanHallCampus.class);
 							startActivity(HonnasanGo);
 						} else if (myAutoComplete.getText().toString()
-								.equals("ROOM 17A")) {
+								.equals("17A")) {
 							Intent HonnasanGo = new Intent(LocationCampus.this,
-									Room17A.class);
+									HonnasanHallCampus.class);
 							startActivity(HonnasanGo);
 
+							Toast.makeText(getApplicationContext(),
+									"NOT SAVED", Toast.LENGTH_LONG).show();
 						} else if (myAutoComplete.getText().toString()
-								.equals("ROOM 18A")) {
+								.equals("18A")) {
 							Intent HonnasanGo = new Intent(LocationCampus.this,
-									Room18A.class);
+									HonnasanHallCampus.class);
 							startActivity(HonnasanGo);
 
+							Toast.makeText(getApplicationContext(),
+									"NOT SAVED", Toast.LENGTH_LONG).show();
 						} else if (myAutoComplete.getText().toString()
-								.equals("ROOM 19A")) {
+								.equals("19A")) {
 							Intent HonnasanGo = new Intent(LocationCampus.this,
-									Room19A.class);
+									HonnasanHallCampus.class);
 							startActivity(HonnasanGo);
 
+							Toast.makeText(getApplicationContext(),
+									"NOT SAVED", Toast.LENGTH_LONG).show();
 						} else if (myAutoComplete.getText().toString()
-								.equals("ROOM 20A")) {
+								.equals("20A")) {
 							Intent HonnasanGo = new Intent(LocationCampus.this,
-									Room20A.class);
+									HonnasanHallCampus.class);
 							startActivity(HonnasanGo);
 
+							Toast.makeText(getApplicationContext(),
+									"NOT SAVED", Toast.LENGTH_LONG).show();
 							// ////END OF HONNASAN ROOM
-
-							// ///BADAR BUILDING
 						} else if (myAutoComplete.getText().toString()
 								.equals("BADAR BUILDING")) {
 							Intent BadarGo = new Intent(LocationCampus.this,
 									BadarBuildingCampus.class);
 							startActivity(BadarGo);
 						} else if (myAutoComplete.getText().toString()
-								.equals("ROOM 21")) {
-							Intent BadarGo = new Intent(LocationCampus.this,
-									Room21.class);
-							startActivity(BadarGo);
-						} else if (myAutoComplete.getText().toString()
-								.equals("ROOM 22")) {
-							Intent BadarGo = new Intent(LocationCampus.this,
-									Room22.class);
-							startActivity(BadarGo);
-						} else if (myAutoComplete.getText().toString()
-								.equals("ROOM 23")) {
-							Intent BadarGo = new Intent(LocationCampus.this,
-									Room23.class);
-							startActivity(BadarGo);
-						} else if (myAutoComplete.getText().toString()
-								.equals("ROOM 24")) {
-							Intent BadarGo = new Intent(LocationCampus.this,
-									Room24.class);
-							startActivity(BadarGo);
-						}						// //END OF BADAR BUILDING
-						else if (myAutoComplete.getText().toString()
 								.equals("NEW BUILDING")) {
 							Intent NewBuildingGo = new Intent(
 									LocationCampus.this,
 									NewBuildingCampus.class);
 							startActivity(NewBuildingGo);
-						}
-						// FIRS FLOOR NEW BUILDING
-						else if (myAutoComplete.getText().toString()
-								.equals("NB 51")) {
-							Intent Orata2Go = new Intent(LocationCampus.this,
-									Nb51.class);
-							startActivity(Orata2Go);
 						} else if (myAutoComplete.getText().toString()
-								.equals("NB 52")) {
-							Intent Orata2Go = new Intent(LocationCampus.this,
-									Nb52.class);
-							startActivity(Orata2Go);
-						} else if (myAutoComplete.getText().toString()
-								.equals("NB 53")) {
-							Intent Orata2Go = new Intent(LocationCampus.this,
-									Nb53.class);
-							startActivity(Orata2Go);
-						} else if (myAutoComplete.getText().toString()
-								.equals("NB 54")) {
-							Intent Orata2Go = new Intent(LocationCampus.this,
-									Nb54.class);
-							startActivity(Orata2Go);
-						} else if (myAutoComplete.getText().toString()
-								.equals("NB 55")) {
-							Intent Orata2Go = new Intent(LocationCampus.this,
-									Nb55.class);
-							startActivity(Orata2Go);
-						}// SECOND FLOOR
-						else if (myAutoComplete.getText().toString()
-								.equals("NB 56")) {
-							Intent Orata2Go = new Intent(LocationCampus.this,
-									Nb56.class);
-							startActivity(Orata2Go);
-						} else if (myAutoComplete.getText().toString()
-								.equals("NB 57")) {
-							Intent Orata2Go = new Intent(LocationCampus.this,
-									Nb57.class);
-							startActivity(Orata2Go);
-						} else if (myAutoComplete.getText().toString()
-								.equals("NB 58")) {
-							Intent Orata2Go = new Intent(LocationCampus.this,
-									Nb58.class);
-							startActivity(Orata2Go);
-						} else if (myAutoComplete.getText().toString()
-								.equals("NB 59")) {
-							Intent Orata2Go = new Intent(LocationCampus.this,
-									Nb59.class);
-							startActivity(Orata2Go);
-						} else if (myAutoComplete.getText().toString()
-								.equals("NB 60")) {
-							Intent Orata2Go = new Intent(LocationCampus.this,
-									Nb60.class);
-							startActivity(Orata2Go);
-						}// THIRD FLOOR
-						else if (myAutoComplete.getText().toString()
-								.equals("NB61 COMPLAB")) {
-							Intent Orata2Go = new Intent(LocationCampus.this,
-									Nb61.class);
-							startActivity(Orata2Go);
-						} else if (myAutoComplete.getText().toString()
-								.equals("NB62 COMPLAB")) {
-							Intent Orata2Go = new Intent(LocationCampus.this,
-									Nb62.class);
-							startActivity(Orata2Go);
-						} else if (myAutoComplete.getText().toString()
-								.equals("NB63 COMPLAB")) {
-							Intent Orata2Go = new Intent(LocationCampus.this,
-									Nb63.class);
-							startActivity(Orata2Go);
-						} else if (myAutoComplete.getText().toString()
-								.equals("NB64 COMPLAB")) {
-							Intent Orata2Go = new Intent(LocationCampus.this,
-									Nb64.class);
-							startActivity(Orata2Go);
-						} else if (myAutoComplete.getText().toString()
-								.equals("NB65 COMPLAB")) {
-							Intent Orata2Go = new Intent(LocationCampus.this,
-									Nb65.class);
-							startActivity(Orata2Go);
-						}// FOURTH FLOOR
-						else if (myAutoComplete.getText().toString()
-								.equals("NB66")) {
-							Intent Orata2Go = new Intent(LocationCampus.this,
-									Nb66.class);
-							startActivity(Orata2Go);
-						} else if (myAutoComplete.getText().toString()
-								.equals("NB67")) {
-							Intent Orata2Go = new Intent(LocationCampus.this,
-									Nb67.class);
-							startActivity(Orata2Go);
-						} else if (myAutoComplete.getText().toString()
-								.equals("NB68")) {
-							Intent Orata2Go = new Intent(LocationCampus.this,
-									Nb68.class);
-							startActivity(Orata2Go);
-						} else if (myAutoComplete.getText().toString()
-								.equals("NB69")) {
-							Intent Orata2Go = new Intent(LocationCampus.this,
-									Nb69.class);
-							startActivity(Orata2Go);
-						} else if (myAutoComplete.getText().toString()
-								.equals("NB70")) {
-							Intent Orata2Go = new Intent(LocationCampus.this,
-									Nb70.class);
-							startActivity(Orata2Go);
-						}// // END OF NB
-							// AIRPLAINE
-						else if (myAutoComplete.getText().toString()
-								.equals("AIRPLANE")) {
-							Intent Orata2Go = new Intent(LocationCampus.this,
-									Airplane.class);
-							startActivity(Orata2Go);
-						} else if (myAutoComplete.getText().toString()
-								.equals("AP1")) {
-							Intent Orata2Go = new Intent(LocationCampus.this,
-									Ap1.class);
-							startActivity(Orata2Go);
-						} else if (myAutoComplete.getText().toString()
-								.equals("AP2")) {
-							Intent Orata2Go = new Intent(LocationCampus.this,
-									Ap2.class);
-							startActivity(Orata2Go);
-						} else if (myAutoComplete.getText().toString()
-								.equals("AP3")) {
-							Intent Orata2Go = new Intent(LocationCampus.this,
-									Ap3.class);
-							startActivity(Orata2Go);
-						} else if (myAutoComplete.getText().toString()
-								.equals("AP4")) {
-							Intent Orata2Go = new Intent(LocationCampus.this,
-									Ap4.class);
-							startActivity(Orata2Go);
-						} else if (myAutoComplete.getText().toString()
-								.equals("AP5")) {
-							Intent Orata2Go = new Intent(LocationCampus.this,
-									Ap5.class);
-							startActivity(Orata2Go);
-						}
-						else if (myAutoComplete.getText().toString()
 								.equals("ORATA 1 BUILDING")) {
 							Intent Orata1Go = new Intent(LocationCampus.this,
 									Orata1Building.class);
 							startActivity(Orata1Go);
-						}
-						// /THIRD FLOOR
-						else if (myAutoComplete.getText().toString()
-								.equals("OB 71")) {
-							Intent Orata2Go = new Intent(LocationCampus.this,
-									Ob71.class);
-							startActivity(Orata2Go);
 						} else if (myAutoComplete.getText().toString()
-								.equals("OB 72")) {
-							Intent Orata2Go = new Intent(LocationCampus.this,
-									Ob72.class);
-							startActivity(Orata2Go);
-						} else if (myAutoComplete.getText().toString()
-								.equals("OB 73")) {
-							Intent Orata2Go = new Intent(LocationCampus.this,
-									Ob73.class);
-							startActivity(Orata2Go);
-						} else if (myAutoComplete.getText().toString()
-								.equals("OB 74")) {
-							Intent Orata2Go = new Intent(LocationCampus.this,
-									Ob74.class);
-							startActivity(Orata2Go);
-						} else if (myAutoComplete.getText().toString()
-								.equals("OB 75")) {
-							Intent Orata2Go = new Intent(LocationCampus.this,
-									Ob75.class);
-							startActivity(Orata2Go);
-						}// 4th FLOOR
-						else if (myAutoComplete.getText().toString()
-								.equals("OB 76")) {
-							Intent Orata2Go = new Intent(LocationCampus.this,
-									Ob76.class);
-							startActivity(Orata2Go);
-						} else if (myAutoComplete.getText().toString()
-								.equals("OB 77")) {
-							Intent Orata2Go = new Intent(LocationCampus.this,
-									Ob77.class);
-							startActivity(Orata2Go);
-						} else if (myAutoComplete.getText().toString()
-								.equals("OB 78")) {
-							Intent Orata2Go = new Intent(LocationCampus.this,
-									Ob78.class);
-							startActivity(Orata2Go);
-						} else if (myAutoComplete.getText().toString()
-								.equals("OB 79")) {
-							Intent Orata2Go = new Intent(LocationCampus.this,
-									Ob79.class);
-							startActivity(Orata2Go);
-						} else if (myAutoComplete.getText().toString()
-								.equals("OB 80")) {
-							Intent Orata2Go = new Intent(LocationCampus.this,
-									Ob80.class);
-							startActivity(Orata2Go);
-						}
-						// END OF ORATA 1
-						else if (myAutoComplete.getText().toString()
 								.equals("ORATA 2 BUILDING")) {
 							Intent Orata2Go = new Intent(LocationCampus.this,
 									Orata2Building.class);
 							startActivity(Orata2Go);
-						}// FIRST FLOOR
-						else if (myAutoComplete.getText().toString()
-								.equals("OB2 81")) {
-							Intent Orata2Go = new Intent(LocationCampus.this,
-									Ob281.class);
-							startActivity(Orata2Go);
-						} else if (myAutoComplete.getText().toString()
-								.equals("OB2 82")) {
-							Intent Orata2Go = new Intent(LocationCampus.this,
-									Ob282.class);
-							startActivity(Orata2Go);
-						} else if (myAutoComplete.getText().toString()
-								.equals("OB2 83")) {
-							Intent Orata2Go = new Intent(LocationCampus.this,
-									Ob283.class);
-							startActivity(Orata2Go);
-						}// SECOND FLOOR
-						else if (myAutoComplete.getText().toString()
-								.equals("OB2 L1")) {
-							Intent Orata2Go = new Intent(LocationCampus.this,
-									Ob2L1.class);
-							startActivity(Orata2Go);
-						} else if (myAutoComplete.getText().toString()
-								.equals("OB2 L2")) {
-							Intent Orata2Go = new Intent(LocationCampus.this,
-									Ob2L2.class);
-							startActivity(Orata2Go);
-						} else if (myAutoComplete.getText().toString()
-								.equals("OB2 84A")) {
-							Intent Orata2Go = new Intent(LocationCampus.this,
-									Ob284A.class);
-							startActivity(Orata2Go);
-						} else if (myAutoComplete.getText().toString()
-								.equals("OB2 84B")) {
-							Intent Orata2Go = new Intent(LocationCampus.this,
-									Ob284B.class);
-							startActivity(Orata2Go);
-						} else if (myAutoComplete.getText().toString()
-								.equals("OB2 84C")) {
-							Intent Orata2Go = new Intent(LocationCampus.this,
-									Ob284C.class);
-							startActivity(Orata2Go);
-						} else if (myAutoComplete.getText().toString()
-								.equals("OB2 85")) {
-							Intent Orata2Go = new Intent(LocationCampus.this,
-									Ob285.class);
-							startActivity(Orata2Go);
-						} else if (myAutoComplete.getText().toString()
-								.equals("OB2 86")) {
-							Intent Orata2Go = new Intent(LocationCampus.this,
-									Ob286.class);
-							startActivity(Orata2Go);
-						} else if (myAutoComplete.getText().toString()
-								.equals("OB2 87A")) {
-							Intent Orata2Go = new Intent(LocationCampus.this,
-									Ob287A.class);
-							startActivity(Orata2Go);
-						} else if (myAutoComplete.getText().toString()
-								.equals("OB2 87B")) {
-							Intent Orata2Go = new Intent(LocationCampus.this,
-									Ob287B.class);
-							startActivity(Orata2Go);
-						}// ORATA 2 .. THIRD FLOOR
-						else if (myAutoComplete.getText().toString()
-								.equals("OB2 L3")) {
-							Intent Orata2Go = new Intent(LocationCampus.this,
-									Ob2L3.class);
-							startActivity(Orata2Go);
-						} else if (myAutoComplete.getText().toString()
-								.equals("OB2 88")) {
-							Intent Orata2Go = new Intent(LocationCampus.this,
-									Ob288.class);
-							startActivity(Orata2Go);
-						} else if (myAutoComplete.getText().toString()
-								.equals("OB2 89")) {
-							Intent Orata2Go = new Intent(LocationCampus.this,
-									Ob289.class);
-							startActivity(Orata2Go);
-						} else if (myAutoComplete.getText().toString()
-								.equals("OB2 90")) {
-							Intent Orata2Go = new Intent(LocationCampus.this,
-									Ob290.class);
-							startActivity(Orata2Go);
-						} else if (myAutoComplete.getText().toString()
-								.equals("OB2 91")) {
-							Intent Orata2Go = new Intent(LocationCampus.this,
-									Ob291.class);
-							startActivity(Orata2Go);
-						} else if (myAutoComplete.getText().toString()
-								.equals("OB2 92")) {
-							Intent Orata2Go = new Intent(LocationCampus.this,
-									Ob292.class);
-							startActivity(Orata2Go);
-						} else if (myAutoComplete.getText().toString()
-								.equals("OB2 93")) {
-							Intent Orata2Go = new Intent(LocationCampus.this,
-									Ob293.class);
-							startActivity(Orata2Go);
-						}// /////ENDS OF ORATA 2
-							// /////////////////////////////////////MGA ROOMS
-							// INTENT
+						}
+						// /////////////////////////////////////MGA ROOMS INTENT
 						else if (myAutoComplete.getText().toString()
 								.equals("ROOM 1")) {
 							Intent Room1Go = new Intent(LocationCampus.this,
@@ -490,39 +183,34 @@ public class LocationCampus extends Activity {
 									Room11.class);
 							startActivity(Room1Go);
 						} else if (myAutoComplete.getText().toString()
-								.equals("ROOM 12")) {
-							Intent Room1Go = new Intent(LocationCampus.this,
-									Room12.class);
-							startActivity(Room1Go);
-						} else if (myAutoComplete.getText().toString()
-								.equals("ROOM 13")) {
-							Intent Room1Go = new Intent(LocationCampus.this,
-									Room13.class);
-							startActivity(Room1Go);
-						} else if (myAutoComplete.getText().toString()
-								.equals("ROOM 14")) {
-							Intent Room1Go = new Intent(LocationCampus.this,
-									Room14.class);
-							startActivity(Room1Go);
-						} else if (myAutoComplete.getText().toString()
-								.equals("ROOM 15")) {
-							Intent Room1Go = new Intent(LocationCampus.this,
-									Room15.class);
-							startActivity(Room1Go);
-						} else if (myAutoComplete.getText().toString()
-								.equals("ROOM 16")) {
-							Intent Room1Go = new Intent(LocationCampus.this,
-									Room16.class);
-							startActivity(Room1Go);
-						} else if (myAutoComplete.getText().toString()
 								.equals("NSTP ROOM")) {
 							Intent Room1Go = new Intent(LocationCampus.this,
 									NSTP_ROOM.class);
 							startActivity(Room1Go);
 						} else if (myAutoComplete.getText().toString()
+								.equals("NSTP AND ALUMNI OFFICE")) {
+							Intent Room1Go = new Intent(LocationCampus.this,
+									NSTP_ALUMNI_OFFICE.class);
+							startActivity(Room1Go);
+						} else if (myAutoComplete.getText().toString()
+								.equals("GUIDANCE OFFICE")) {
+							Intent Room1Go = new Intent(LocationCampus.this,
+									GuidanceOffice.class);
+							startActivity(Room1Go);
+						} else if (myAutoComplete.getText().toString()
+								.equals("OSA OFFICE")) {
+							Intent Room1Go = new Intent(LocationCampus.this,
+									OSAOffice.class);
+							startActivity(Room1Go);
+						} else if (myAutoComplete.getText().toString()
 								.equals("AVR/ AUDIO VISUAL ROOM")) {
 							Intent Room1Go = new Intent(LocationCampus.this,
 									AudioVisualRoom.class);
+							startActivity(Room1Go);
+						} else if (myAutoComplete.getText().toString()
+								.equals("SUPPLY OFFICE")) {
+							Intent Room1Go = new Intent(LocationCampus.this,
+									SupplyOffice.class);
 							startActivity(Room1Go);
 						} else if (myAutoComplete.getText().toString()
 								.equals("ROOM 25")) {
@@ -595,12 +283,12 @@ public class LocationCampus extends Activity {
 									Room51.class);
 							startActivity(Room1Go);
 						} else if (myAutoComplete.getText().toString()
-								.equals("ROOM 47B")) {
+								.equals("ROOM 47-B")) {
 							Intent Room1Go = new Intent(LocationCampus.this,
 									Room47B.class);
 							startActivity(Room1Go);
 						} else if (myAutoComplete.getText().toString()
-								.equals("ROOM 47A")) {
+								.equals("ROOM 47-A")) {
 							Intent Room1Go = new Intent(LocationCampus.this,
 									Room47A.class);
 							startActivity(Room1Go);
@@ -650,7 +338,9 @@ public class LocationCampus extends Activity {
 									GreenHome.class);
 							startActivity(Room1Go);
 						}
+
 					} else {
+
 						Toast.makeText(getApplicationContext(), "NOT SAVED",
 								Toast.LENGTH_LONG).show();
 					}
@@ -658,24 +348,32 @@ public class LocationCampus extends Activity {
 				}
 			});
 			myAutoComplete.setOnItemClickListener(new OnItemClickListener() {
+
 				@Override
 				public void onItemClick(AdapterView<?> parent, View arg1,
 						int pos, long id) {
+
 					RelativeLayout rl = (RelativeLayout) arg1;
 					TextView tv = (TextView) rl.getChildAt(0);
 					myAutoComplete.setText(tv.getText().toString());
+
 				}
+
 			});
+
 			// add the listener so it will tries to suggest while the user types
 			myAutoComplete
 					.addTextChangedListener(new CustomAutoCompleteTextChangedListener(
 							this));
+
 			// ObjectItemData has no value at first
 			MyObject[] ObjectItemData = new MyObject[0];
+
 			// set the custom ArrayAdapter
 			myAdapter = new AutocompleteCustomArrayAdapter(this,
 					R.layout.list_view_row, ObjectItemData);
 			myAutoComplete.setAdapter(myAdapter);
+
 		} catch (NullPointerException e) {
 			e.printStackTrace();
 		} catch (Exception e) {
@@ -684,25 +382,28 @@ public class LocationCampus extends Activity {
 	}
 
 	public void insertSampleData() {
+
 		// CREATE
 		// HONNASAN HALL = NOT INCLUDE = GO TO HONNASAN BUILDING AND IT WILL
 		// TOAST ONLY THE LOCATION OF A CERTAIN ROOM // DONE
-		databaseH.create(new MyObject("ROOM 17A"));
-		databaseH.create(new MyObject("ROOM 18A"));
-		databaseH.create(new MyObject("ROOM 19A"));
-		databaseH.create(new MyObject("ROOM 20A"));
-		// BADAR BUILDING // DONE
+		databaseH.create(new MyObject("17A"));
+		databaseH.create(new MyObject("18A"));
+		databaseH.create(new MyObject("19A"));
+		databaseH.create(new MyObject("20A"));
+
+		// BADAR BUILDING
 		databaseH.create(new MyObject("ROOM 21"));
 		databaseH.create(new MyObject("ROOM 22"));
 		databaseH.create(new MyObject("ROOM 23"));
 		databaseH.create(new MyObject("ROOM 24"));
+
 		// ORATA 2
-		// first floor// DONE
+		// first floor
 		databaseH.create(new MyObject("OB2 81"));
 		databaseH.create(new MyObject("OB2 82"));
 		databaseH.create(new MyObject("OB2 83"));
-		// second floor = DONE
-		databaseH.create(new MyObject("OB2 L1"));
+		// second floor
+		databaseH.create(new MyObject("OBL 1"));
 		databaseH.create(new MyObject("OB2 84A"));
 		databaseH.create(new MyObject("OB2 84B"));
 		databaseH.create(new MyObject("OB2 84C"));
@@ -711,7 +412,7 @@ public class LocationCampus extends Activity {
 		databaseH.create(new MyObject("OB2 87A"));
 		databaseH.create(new MyObject("OB2 87B"));
 		databaseH.create(new MyObject("OB2 L2"));
-		// third floor == DONE
+		// third floor
 		databaseH.create(new MyObject("OB2 L3"));
 		databaseH.create(new MyObject("OB2 88"));
 		databaseH.create(new MyObject("OB2 89"));
@@ -719,50 +420,67 @@ public class LocationCampus extends Activity {
 		databaseH.create(new MyObject("OB2 91"));
 		databaseH.create(new MyObject("OB2 92"));
 		databaseH.create(new MyObject("OB2 93"));
+
 		// ORATA 1
-		// third floor == DONE
+		// first floor
+		databaseH.create(new MyObject("ORATA LIBRARY"));
+		databaseH.create(new MyObject("MAIN LIBRARY"));
+		// second floor
+
+		databaseH.create(new MyObject("GS"));
+		databaseH.create(new MyObject("Archives Section"));
+		databaseH.create(new MyObject("Multimedia Room"));
+		databaseH.create(new MyObject("Internet"));
+		databaseH.create(new MyObject("Law library"));
+		// third floor
 		databaseH.create(new MyObject("OB 71"));
 		databaseH.create(new MyObject("OB 72"));
 		databaseH.create(new MyObject("OB 73"));
 		databaseH.create(new MyObject("OB 74"));
 		databaseH.create(new MyObject("OB 75"));
-		// fourth floor == // DONE
+		// fourth floor
 		databaseH.create(new MyObject("OB 76"));
 		databaseH.create(new MyObject("OB 77"));
 		databaseH.create(new MyObject("OB 78"));
 		databaseH.create(new MyObject("OB 79"));
 		databaseH.create(new MyObject("OB 80"));
+
 		// NEW BUILDING
-		// first floor == DONE
+		// first floor
 		databaseH.create(new MyObject("NB 51"));
 		databaseH.create(new MyObject("NB 52"));
 		databaseH.create(new MyObject("NB 53"));
 		databaseH.create(new MyObject("NB 54"));
 		databaseH.create(new MyObject("NB 55"));
-		// second floor == DONE
+		databaseH.create(new MyObject("Chemical Laboratory"));
+		databaseH.create(new MyObject("REQUITION"));
+		databaseH.create(new MyObject("STOCK ROOM"));
+		// second floor
 		databaseH.create(new MyObject("NB 56"));
 		databaseH.create(new MyObject("NB 57"));
 		databaseH.create(new MyObject("NB 58"));
 		databaseH.create(new MyObject("NB 59"));
 		databaseH.create(new MyObject("NB 60"));
-		// third floor == DONE
+		// third floor
 		databaseH.create(new MyObject("NB61 COMPLAB"));
 		databaseH.create(new MyObject("NB62 COMPLAB"));
 		databaseH.create(new MyObject("NB63 COMPLAB"));
 		databaseH.create(new MyObject("NB64 COMPLAB"));
 		databaseH.create(new MyObject("NB65 COMPLAB"));
-		// fourth floor = DONE
+		// fourth floor
 		databaseH.create(new MyObject("NB 66"));
 		databaseH.create(new MyObject("NB 67"));
 		databaseH.create(new MyObject("NB 68"));
 		databaseH.create(new MyObject("NB 69"));
 		databaseH.create(new MyObject("NB 70"));
-		// AIRPLANE == DONE
+
+		// AIRPLANE
 		databaseH.create(new MyObject("AP1"));
 		databaseH.create(new MyObject("AP2"));
 		databaseH.create(new MyObject("AP3"));
 		databaseH.create(new MyObject("AP4"));
 		databaseH.create(new MyObject("AP5"));
+
 		// sa may gilid = USE INTENT HERE // DONE
 		databaseH.create(new MyObject("ROOM 1"));
 		databaseH.create(new MyObject("ROOM 2"));
@@ -776,21 +494,31 @@ public class LocationCampus extends Activity {
 		databaseH.create(new MyObject("ROOM 10"));
 		databaseH.create(new MyObject("ROOM 11"));
 		databaseH.create(new MyObject("NSTP ROOM"));
+		databaseH.create(new MyObject("NSTP AND ALUMNI OFFICE"));
+		databaseH.create(new MyObject("GUIDANCE OFFICE"));
+		databaseH.create(new MyObject("SUPPLY OFFICE"));
+		databaseH.create(new MyObject("OSA OFFICE"));
 		databaseH.create(new MyObject("AVR/ AUDIO VISUAL ROOM"));
-		// second floor // DONE
-		databaseH.create(new MyObject("ROOM 12"));
-		databaseH.create(new MyObject("ROOM 13"));
-		databaseH.create(new MyObject("ROOM 14"));
-		databaseH.create(new MyObject("ROOM 15"));
-		databaseH.create(new MyObject("ROOM 16"));
+
+		// second floor
+		databaseH.create(new MyObject("11"));
+		databaseH.create(new MyObject("12"));
+		databaseH.create(new MyObject("13"));
+		databaseH.create(new MyObject("14"));
+		databaseH.create(new MyObject("15"));
+		databaseH.create(new MyObject("16"));
+		databaseH.create(new MyObject("ID ROOM"));
+		databaseH.create(new MyObject("CIM"));
+
 		// EDUCATION BUILDING // DONE
 		databaseH.create(new MyObject("SOCIAL WORK"));
-		databaseH.create(new MyObject("ROOM 47A"));
-		databaseH.create(new MyObject("ROOM 47B"));
-		databaseH.create(new MyObject("ROOM 48"));
-		databaseH.create(new MyObject("ROOM 49"));
-		databaseH.create(new MyObject("ROOM 50"));
-		databaseH.create(new MyObject("ROOM 51"));
+		databaseH.create(new MyObject("47A"));
+		databaseH.create(new MyObject("47B"));
+		databaseH.create(new MyObject("48"));
+		databaseH.create(new MyObject("49"));
+		databaseH.create(new MyObject("50"));
+		databaseH.create(new MyObject("51"));
+
 		// OTHERS // DONE
 		databaseH.create(new MyObject("UCU BOTIKA"));
 		databaseH.create(new MyObject("BIO LABORATORY"));
@@ -799,6 +527,7 @@ public class LocationCampus extends Activity {
 		databaseH.create(new MyObject("CHEMICAL LABORATORY"));
 		databaseH.create(new MyObject("ENGINEERING LABORATORY"));
 		databaseH.create(new MyObject("GREENHOME"));
+
 		// CRIMINALISTIC // DONE
 		databaseH.create(new MyObject("ROOM 25"));
 		databaseH.create(new MyObject("ROOM 26"));
@@ -810,13 +539,15 @@ public class LocationCampus extends Activity {
 		databaseH.create(new MyObject("ROOM 31"));
 		databaseH.create(new MyObject("BAKING ROOM"));
 		databaseH.create(new MyObject("COMMERCIAL COOKING"));
+
 		// BUILDINGS // DONE
+
 		databaseH.create(new MyObject("HONNASAN HALL"));
 		databaseH.create(new MyObject("BADAR BUILDING"));
 		databaseH.create(new MyObject("ORATA 2 BUILDING"));
 		databaseH.create(new MyObject("ORATA 1 BUILDING"));
 		databaseH.create(new MyObject("NEW BUILDING"));
 		databaseH.create(new MyObject("GYMNASIUM"));
-		databaseH.create(new MyObject("AIRPLANE"));
+
 	}
 }
