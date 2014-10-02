@@ -206,6 +206,38 @@
             android:name=".SocialWork"
             android:label="@string/title_activity_social_work" >
         </activity>
+        <activity
+            android:name=".UcuBotika"
+            android:label="@string/title_activity_ucu_botika" >
+        </activity>
+        <activity
+            android:name=".BioLaboratory"
+            android:label="@string/title_activity_bio_laboratory" >
+        </activity>
+        <activity
+            android:name=".ChemistryLaboratory"
+            android:label="@string/title_activity_chemistry_laboratory" >
+        </activity>
+        <activity
+            android:name=".ChemicalLaboratory"
+            android:label="@string/title_activity_chemical_laboratory" >
+        </activity>
+        <activity
+            android:name=".PharmaceuticalLaboratory"
+            android:label="@string/title_activity_pharmaceutical_laboratory" >
+        </activity>
+        <activity
+            android:name=".EngineeringLaboratory"
+            android:label="@string/title_activity_engineering_laboratory" >
+        </activity>
+        <activity
+            android:name=".Gymnasium"
+            android:label="@string/title_activity_gymnasium" >
+        </activity>
+        <activity
+            android:name=".GreenHome"
+            android:label="@string/title_activity_green_home" >
+        </activity>
     </application>
 
 </manifest>
