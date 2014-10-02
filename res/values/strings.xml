@@ -50,13 +50,5 @@
     <string name="title_activity_room47">Room47A</string>
     <string name="title_activity_room47_b">Room47B</string>
     <string name="title_activity_social_work">SocialWork</string>
-    <string name="title_activity_ucu_botika">UcuBotika</string>
-    <string name="title_activity_bio_laboratory">BioLaboratory</string>
-    <string name="title_activity_chemistry_laboratory">ChemistryLaboratory</string>
-    <string name="title_activity_chemical_laboratory">ChemicalLaboratory</string>
-    <string name="title_activity_pharmaceutical_laboratory">PharmaceuticalLaboratory</string>
-    <string name="title_activity_engineering_laboratory">EngineeringLaboratory</string>
-    <string name="title_activity_gymnasium">Gymnasium</string>
-    <string name="title_activity_green_home">GreenHome</string>
 
 </resources>
