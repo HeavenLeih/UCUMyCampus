@@ -238,6 +238,298 @@
             android:name=".GreenHome"
             android:label="@string/title_activity_green_home" >
         </activity>
+        <activity
+            android:name=".Room21"
+            android:label="@string/title_activity_room21" >
+        </activity>
+        <activity
+            android:name=".Room22"
+            android:label="@string/title_activity_room22" >
+        </activity>
+        <activity
+            android:name=".Room23"
+            android:label="@string/title_activity_room23" >
+        </activity>
+        <activity
+            android:name=".Room24"
+            android:label="@string/title_activity_room24" >
+        </activity>
+        <activity
+            android:name=".Ob281"
+            android:label="@string/title_activity_ob281" >
+        </activity>
+        <activity
+            android:name=".Ob282"
+            android:label="@string/title_activity_ob282" >
+        </activity>
+        <activity
+            android:name=".Ob283"
+            android:label="@string/title_activity_ob283" >
+        </activity>
+        <activity
+            android:name=".Ob2L1"
+            android:label="@string/title_activity_ob2_l1" >
+        </activity>
+        <activity
+            android:name=".Ob2L2"
+            android:label="@string/title_activity_ob2_l2" >
+        </activity>
+        <activity
+            android:name=".Ob284A"
+            android:label="@string/title_activity_ob284" >
+        </activity>
+        <activity
+            android:name=".Ob284B"
+            android:label="@string/title_activity_ob284_b" >
+        </activity>
+        <activity
+            android:name=".Ob284C"
+            android:label="@string/title_activity_ob284_c" >
+        </activity>
+        <activity
+            android:name=".Ob285"
+            android:label="@string/title_activity_ob285" >
+        </activity>
+        <activity
+            android:name=".Ob286"
+            android:label="@string/title_activity_ob286" >
+        </activity>
+        <activity
+            android:name=".Ob287A"
+            android:label="@string/title_activity_ob287" >
+        </activity>
+        <activity
+            android:name=".Ob287B"
+            android:label="@string/title_activity_ob287_b" >
+        </activity>
+        <activity
+            android:name=".Ob2L3"
+            android:label="@string/title_activity_ob2_l3" >
+        </activity>
+        <activity
+            android:name=".Ob288"
+            android:label="@string/title_activity_ob288" >
+        </activity>
+        <activity
+            android:name=".Ob289"
+            android:label="@string/title_activity_ob289" >
+        </activity>
+        <activity
+            android:name=".Ob290"
+            android:label="@string/title_activity_ob290" >
+        </activity>
+        <activity
+            android:name=".Ob291"
+            android:label="@string/title_activity_ob291" >
+        </activity>
+        <activity
+            android:name=".Ob292"
+            android:label="@string/title_activity_ob292" >
+        </activity>
+        <activity
+            android:name=".Ob293"
+            android:label="@string/title_activity_ob293" >
+        </activity>
+        <activity
+            android:name=".Ob71"
+            android:label="@string/title_activity_ob71" >
+        </activity>
+        <activity
+            android:name=".Ob72"
+            android:label="@string/title_activity_ob72" >
+        </activity>
+        <activity
+            android:name=".Ob73"
+            android:label="@string/title_activity_ob73" >
+        </activity>
+        <activity
+            android:name=".Ob74"
+            android:label="@string/title_activity_ob74" >
+        </activity>
+        <activity
+            android:name=".Ob75"
+            android:label="@string/title_activity_ob75" >
+        </activity>
+        <activity
+            android:name=".Ob76"
+            android:label="@string/title_activity_ob76" >
+        </activity>
+        <activity
+            android:name=".Ob77"
+            android:label="@string/title_activity_ob77" >
+        </activity>
+        <activity
+            android:name=".Ob78"
+            android:label="@string/title_activity_ob78" >
+        </activity>
+        <activity
+            android:name=".Ob79"
+            android:label="@string/title_activity_ob79" >
+        </activity>
+        <activity
+            android:name=".Ob80"
+            android:label="@string/title_activity_ob80" >
+        </activity>
+        <activity
+            android:name=".Nb51"
+            android:label="@string/title_activity_nb51" >
+        </activity>
+        <activity
+            android:name=".Nb52"
+            android:label="@string/title_activity_nb52" >
+        </activity>
+        <activity
+            android:name=".Nb53"
+            android:label="@string/title_activity_nb53" >
+        </activity>
+        <activity
+            android:name=".Nb54"
+            android:label="@string/title_activity_nb54" >
+        </activity>
+        <activity
+            android:name=".Nb55"
+            android:label="@string/title_activity_nb55" >
+        </activity>
+        <activity
+            android:name=".Nb56"
+            android:label="@string/title_activity_nb56" >
+        </activity>
+        <activity
+            android:name=".Nb57"
+            android:label="@string/title_activity_nb57" >
+        </activity>
+        <activity
+            android:name=".Nb58"
+            android:label="@string/title_activity_nb58" >
+        </activity>
+        <activity
+            android:name=".Nb59"
+            android:label="@string/title_activity_nb59" >
+        </activity>
+        <activity
+            android:name=".Nb60"
+            android:label="@string/title_activity_nb60" >
+        </activity>
+        <activity
+            android:name=".Nb61"
+            android:label="@string/title_activity_nb61" >
+        </activity>
+        <activity
+            android:name=".Nb62"
+            android:label="@string/title_activity_nb62" >
+        </activity>
+        <activity
+            android:name=".Nb63"
+            android:label="@string/title_activity_nb63" >
+        </activity>
+        <activity
+            android:name=".Nb64"
+            android:label="@string/title_activity_nb64" >
+        </activity>
+        <activity
+            android:name=".Nb65"
+            android:label="@string/title_activity_nb65" >
+        </activity>
+        <activity
+            android:name=".Nb66"
+            android:label="@string/title_activity_nb66" >
+        </activity>
+        <activity
+            android:name=".Nb67"
+            android:label="@string/title_activity_nb67" >
+        </activity>
+        <activity
+            android:name=".Nb68"
+            android:label="@string/title_activity_nb68" >
+        </activity>
+        <activity
+            android:name=".Nb69"
+            android:label="@string/title_activity_nb69" >
+        </activity>
+        <activity
+            android:name=".Nb70"
+            android:label="@string/title_activity_nb70" >
+        </activity>
+        <activity
+            android:name=".Airplane"
+            android:label="@string/title_activity_airplane" >
+        </activity>
+        <activity
+            android:name=".Ap1"
+            android:label="@string/title_activity_ap1" >
+        </activity>
+        <activity
+            android:name=".Ap2"
+            android:label="@string/title_activity_ap2" >
+        </activity>
+        <activity
+            android:name=".Ap3"
+            android:label="@string/title_activity_ap3" >
+        </activity>
+        <activity
+            android:name=".Ap4"
+            android:label="@string/title_activity_ap4" >
+        </activity>
+        <activity
+            android:name=".Ap5"
+            android:label="@string/title_activity_ap5" >
+        </activity>
+        <activity
+            android:name=".Room12"
+            android:label="@string/title_activity_room12" >
+        </activity>
+        <activity
+            android:name=".Room13"
+            android:label="@string/title_activity_room13" >
+        </activity>
+        <activity
+            android:name=".Room14"
+            android:label="@string/title_activity_room14" >
+        </activity>
+        <activity
+            android:name=".Room15"
+            android:label="@string/title_activity_room15" >
+        </activity>
+        <activity
+            android:name=".Room16"
+            android:label="@string/title_activity_room16" >
+        </activity>
+        <activity
+            android:name=".Room17A"
+            android:label="@string/title_activity_room17" >
+        </activity>
+        <activity
+            android:name=".Room18A"
+            android:label="@string/title_activity_room18" >
+        </activity>
+        <activity
+            android:name=".Room19A"
+            android:label="@string/title_activity_room19" >
+        </activity>
+        <activity
+            android:name=".Room20A"
+            android:label="@string/title_activity_room20" >
+        </activity>
+        <activity
+            android:name=".HonasanOrata1"
+            android:label="@string/title_activity_honasan_orata1" >
+        </activity>
+        <activity
+            android:name=".HonasanOrata2"
+            android:label="@string/title_activity_honasan_orata2" >
+        </activity>
+        <activity
+            android:name=".HonasanNewBuilding"
+            android:label="@string/title_activity_honasan_new_building" >
+        </activity>
+        <activity
+            android:name=".HonasanGymnasium"
+            android:label="@string/title_activity_honasan_gymnasium" >
+        </activity>
+        <activity
+            android:name=".HonasanBadar"
+            android:label="@string/title_activity_honasan_badar" >
+        </activity>
     </application>
 
 </manifest>

@@ -49,24 +49,82 @@ public class DirectionCampus extends Activity {
 			myAutoCompleteDir = (CustomAutoCompleteView) findViewById(R.id.myautocompleteDir);
 			myAutoCompleteLoc = (CustomAutoCompleteView) findViewById(R.id.myautocompleteLoc);
 			btnGetDirection = (Button) findViewById(R.id.btnGetDirection);
-			
-			btnGetDirection.setOnClickListener(new OnClickListener(){
+
+			btnGetDirection.setOnClickListener(new OnClickListener() {
 
 				@Override
 				public void onClick(View arg0) {
 					// TODO Auto-generated method stub
-					
+
 					dbcon.open();
 
 					long consave = dbcon.method_savecondir(myAutoCompleteDir
-							.getText().toString(),myAutoCompleteLoc.getText().toString());
+							.getText().toString(), myAutoCompleteLoc.getText()
+							.toString());
 
 					if (consave > 0) {
 
-						Toast.makeText(getApplicationContext(), "SAVED IN HISTORY",
-								Toast.LENGTH_LONG).show();
+						Toast.makeText(getApplicationContext(),
+								"SAVED IN HISTORY", Toast.LENGTH_LONG).show();
 
-						
+						// ////////////////////////////////BUILDINGS INTENT
+						if (((myAutoCompleteLoc.getText().toString()
+								.equals("HONNASAN HALL")) && (myAutoCompleteDir
+								.getText().toString()
+								.equals("ORATA 1 BUILDING")))
+								|| ((myAutoCompleteDir.getText().toString()
+										.equals("HONNASAN HALL")) && (myAutoCompleteLoc
+										.getText().toString()
+										.equals("ORATA 1 BUILDING")))) {
+							Intent HonnasanGo = new Intent(
+									DirectionCampus.this,
+									HonasanOrata1.class);
+							startActivity(HonnasanGo);
+						} else if (((myAutoCompleteLoc.getText().toString()
+								.equals("HONNASAN HALL"))
+								&& (myAutoCompleteDir.getText().toString()
+										.equals("ORATA 2 BUILDING"))) || ((myAutoCompleteDir.getText().toString()
+												.equals("HONNASAN HALL"))
+												&& (myAutoCompleteLoc.getText().toString()
+														.equals("ORATA 2 BUILDING")))) {
+							Intent HonnasanGo = new Intent(
+									DirectionCampus.this,
+									HonasanOrata2.class);
+							startActivity(HonnasanGo);
+						} else if (((myAutoCompleteLoc.getText().toString()
+								.equals("HONNASAN HALL"))
+								&& (myAutoCompleteDir.getText().toString()
+										.equals("NEW BUILDING")))|| ((myAutoCompleteDir.getText().toString()
+												.equals("HONNASAN HALL"))
+												&& (myAutoCompleteLoc.getText().toString()
+														.equals("NEW BUILDING")))) {
+							Intent HonnasanGo = new Intent(
+									DirectionCampus.this,
+									HonasanNewBuilding.class);
+							startActivity(HonnasanGo);
+						} else if( ((myAutoCompleteLoc.getText().toString()
+								.equals("HONNASAN HALL"))
+								&& (myAutoCompleteDir.getText().toString()
+										.equals("GYMNASIUM")))||((myAutoCompleteDir.getText().toString()
+												.equals("HONNASAN HALL"))
+												&& (myAutoCompleteLoc.getText().toString()
+														.equals("GYMNASIUM")))) {
+							Intent HonnasanGo = new Intent(
+									DirectionCampus.this,
+									HonasanGymnasium.class);
+							startActivity(HonnasanGo);
+						} else if (((myAutoCompleteLoc.getText().toString()
+								.equals("HONNASAN HALL"))
+								&& (myAutoCompleteDir.getText().toString()
+										.equals("BADAR BUILDING")))|| ((myAutoCompleteDir.getText().toString()
+												.equals("HONNASAN HALL"))
+												&& (myAutoCompleteLoc.getText().toString()
+														.equals("BADAR BUILDING")))) {
+							Intent HonnasanGo = new Intent(
+									DirectionCampus.this,
+									HonasanBadar.class);
+							startActivity(HonnasanGo);
+						}
 
 					} else {
 
@@ -76,7 +134,7 @@ public class DirectionCampus extends Activity {
 					dbcon.close();
 				}
 			});
-					
+
 			myAutoCompleteDir.setOnItemClickListener(new OnItemClickListener() {
 
 				@Override
@@ -133,16 +191,16 @@ public class DirectionCampus extends Activity {
 
 		// CREATE
 		// HONNASAN HALL
-		databaseH.createD(new MyObjectD("17A"));
-		databaseH.createD(new MyObjectD("18A"));
-		databaseH.createD(new MyObjectD("19A"));
-		databaseH.createD(new MyObjectD("20A"));
+		databaseH.createD(new MyObjectD("ROOM 17A"));
+		databaseH.createD(new MyObjectD("ROOM 18A"));
+		databaseH.createD(new MyObjectD("ROOM 19A"));
+		databaseH.createD(new MyObjectD("ROOM 20A"));
 
 		// BADAR BUILDING
-		databaseH.createD(new MyObjectD("Room 21"));
-		databaseH.createD(new MyObjectD("Room 22"));
-		databaseH.createD(new MyObjectD("Room 23"));
-		databaseH.createD(new MyObjectD("Room 24"));
+		databaseH.createD(new MyObjectD("ROOM 21"));
+		databaseH.createD(new MyObjectD("ROOM 22"));
+		databaseH.createD(new MyObjectD("ROOM 23"));
+		databaseH.createD(new MyObjectD("ROOM 24"));
 
 		// ORATA 2
 		// first floor
@@ -150,7 +208,7 @@ public class DirectionCampus extends Activity {
 		databaseH.createD(new MyObjectD("OB2 82"));
 		databaseH.createD(new MyObjectD("OB2 83"));
 		// second floor
-		databaseH.createD(new MyObjectD("OBL 1"));
+		databaseH.createD(new MyObjectD("OB2 L1"));
 		databaseH.createD(new MyObjectD("OB2 84A"));
 		databaseH.createD(new MyObjectD("OB2 84B"));
 		databaseH.createD(new MyObjectD("OB2 84C"));
@@ -169,18 +227,6 @@ public class DirectionCampus extends Activity {
 		databaseH.createD(new MyObjectD("OB2 93"));
 
 		// ORATA 1
-		// first floor
-		databaseH.createD(new MyObjectD("Circulation section"));
-		databaseH.createD(new MyObjectD("Periodical"));
-		databaseH.createD(new MyObjectD("Reference Section"));
-		// second floor
-		databaseH.createD(new MyObjectD("Regelation"));
-		databaseH.createD(new MyObjectD("Thesis"));
-		databaseH.createD(new MyObjectD("GS"));
-		databaseH.createD(new MyObjectD("Archives Section"));
-		databaseH.createD(new MyObjectD("Multimedia Room"));
-		databaseH.createD(new MyObjectD("Internet"));
-		databaseH.createD(new MyObjectD("Law library"));
 		// third floor
 		databaseH.createD(new MyObjectD("OB 71"));
 		databaseH.createD(new MyObjectD("OB 72"));
@@ -202,8 +248,6 @@ public class DirectionCampus extends Activity {
 		databaseH.createD(new MyObjectD("NB 54"));
 		databaseH.createD(new MyObjectD("NB 55"));
 		databaseH.createD(new MyObjectD("Chemical Laboratory"));
-		databaseH.createD(new MyObjectD("REQUITION"));
-		databaseH.createD(new MyObjectD("STOCK ROOM"));
 		// second floor
 		databaseH.createD(new MyObjectD("NB 56"));
 		databaseH.createD(new MyObjectD("NB 57"));
@@ -241,26 +285,32 @@ public class DirectionCampus extends Activity {
 		databaseH.createD(new MyObjectD("ROOM 8"));
 		databaseH.createD(new MyObjectD("ROOM 9"));
 		databaseH.createD(new MyObjectD("ROOM 10"));
-		databaseH.createD(new MyObjectD("GUIDANCE"));
-		databaseH.createD(new MyObjectD("OSA"));
+		databaseH.createD(new MyObjectD("NSTP ROOM"));
+		databaseH.createD(new MyObjectD("AVR/ AUDIO VISUAL ROOM"));
 		// second floor
-		databaseH.createD(new MyObjectD("11"));
-		databaseH.createD(new MyObjectD("12"));
-		databaseH.createD(new MyObjectD("13"));
-		databaseH.createD(new MyObjectD("14"));
-		databaseH.createD(new MyObjectD("15"));
-		databaseH.createD(new MyObjectD("16"));
-		databaseH.createD(new MyObjectD("ID ROOM"));
-		databaseH.createD(new MyObjectD("CIM"));
+		databaseH.createD(new MyObjectD("ROOM 11"));
+		databaseH.createD(new MyObjectD("ROOM 12"));
+		databaseH.createD(new MyObjectD("ROOM 13"));
+		databaseH.createD(new MyObjectD("ROOM 14"));
+		databaseH.createD(new MyObjectD("ROOM 15"));
+		databaseH.createD(new MyObjectD("ROOM 16"));
 
 		// EDUCATION BUILDING
-		databaseH.createD(new MyObjectD("46SWRM"));
-		databaseH.createD(new MyObjectD("47A"));
-		databaseH.createD(new MyObjectD("47B"));
-		databaseH.createD(new MyObjectD("48"));
-		databaseH.createD(new MyObjectD("49"));
-		databaseH.createD(new MyObjectD("50"));
-		databaseH.createD(new MyObjectD("51"));
+		databaseH.createD(new MyObjectD("SOCIAL WORK"));
+		databaseH.createD(new MyObjectD("ROOM 47A"));
+		databaseH.createD(new MyObjectD("ROOM 47B"));
+		databaseH.createD(new MyObjectD("ROOM 48"));
+		databaseH.createD(new MyObjectD("ROOM 49"));
+		databaseH.createD(new MyObjectD("ROOM 50"));
+		databaseH.createD(new MyObjectD("ROOM 51"));
+
+		databaseH.createD(new MyObjectD("UCU BOTIKA"));
+		databaseH.createD(new MyObjectD("BIO LABORATORY"));
+		databaseH.createD(new MyObjectD("CHEMISTRY LABORATORY"));
+		databaseH.createD(new MyObjectD("PHARMACEUTICAL LABORATORY"));
+		databaseH.createD(new MyObjectD("CHEMICAL LABORATORY"));
+		databaseH.createD(new MyObjectD("ENGINEERING LABORATORY"));
+		databaseH.createD(new MyObjectD("GREENHOME"));
 
 		// CRIMINALISTIC
 		databaseH.createD(new MyObjectD("ROOM 25"));
@@ -268,18 +318,20 @@ public class DirectionCampus extends Activity {
 		databaseH.createD(new MyObjectD("ROOM 27"));
 		databaseH.createD(new MyObjectD("ROOM 28"));
 
-		// CREATE
-		// HONNASAN HALL
+		databaseH.createD(new MyObjectD("ROOM 29"));
+		databaseH.createD(new MyObjectD("ACCRE ROOM"));
+		databaseH.createD(new MyObjectD("TYPING ROOM"));
+		databaseH.createD(new MyObjectD("ROOM 31"));
+		databaseH.createD(new MyObjectD("BAKING ROOM"));
+		databaseH.createD(new MyObjectD("COMMERCIAL COOKING"));
+
 		databaseH.createD(new MyObjectD("HONNASAN HALL"));
-		// BADAR BUILDING
 		databaseH.createD(new MyObjectD("BADAR BUILDING"));
-		// ORATA 2
-		databaseH.createD(new MyObjectD("ORATA 2"));
-		// ORATA 1
-		databaseH.createD(new MyObjectD("ORATA 1"));
-		// NEW BUILDING
-		// first floor
+		databaseH.createD(new MyObjectD("ORATA 2 BUILDING"));
+		databaseH.createD(new MyObjectD("ORATA 1 BUILDING"));
 		databaseH.createD(new MyObjectD("NEW BUILDING"));
+		databaseH.createD(new MyObjectD("GYMNASIUM"));
+		databaseH.createD(new MyObjectD("AIRPLANE"));
 
 	}
 }
