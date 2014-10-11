@@ -8,13 +8,9 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="edu.ucuccs.ucumycampus.Room11" >
 
-    <ImageView
-        android:id="@+id/imageView1"
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="143dp"
-        android:src="@drawable/room11" />
+        android:text="@string/hello_world" />
 
 </RelativeLayout>
