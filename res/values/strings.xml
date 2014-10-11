@@ -131,5 +131,28 @@
     <string name="title_activity_honasan_new_building">HonasanNewBuilding</string>
     <string name="title_activity_honasan_gymnasium">HonasanGymnasium</string>
     <string name="title_activity_honasan_badar">HonasanBadar</string>
+    <string name="title_activity_honasan_air">HonasanAir</string>
+    <string name="title_activity_honasan_green">HonasanGreen</string>
+    <string name="title_activity_badar_orata1">BadarOrata1</string>
+    <string name="title_activity_badar_orata2">BadarOrata2</string>
+    <string name="title_activity_badar_new">BadarNew</string>
+    <string name="title_activity_badar_gym">BadarGym</string>
+    <string name="title_activity_badar_air">BadarAir</string>
+    <string name="title_activity_badar_green">BadarGreen</string>
+    <string name="title_activity_orata1_orata2">Orata1Orata2</string>
+    <string name="title_activity_orata1_new">Orata1New</string>
+    <string name="title_activity_orata1_gym">Orata1Gym</string>
+    <string name="title_activity_orata1_air">Orata1Air</string>
+    <string name="title_activity_orata1_green">Orata1Green</string>
+    <string name="title_activity_orata2_new">Orata2New</string>
+    <string name="title_activity_orata2_gym">Orata2Gym</string>
+    <string name="title_activity_orata2_air">Orata2Air</string>
+    <string name="title_activity_orata2_green">Orata2Green</string>
+    <string name="title_activity_new_gym">NewGym</string>
+    <string name="title_activity_new_air">NewAir</string>
+    <string name="title_activity_new_green">NewGreen</string>
+    <string name="title_activity_gym_air">GymAir</string>
+    <string name="title_activity_gym_green">GymGreen</string>
+    <string name="title_activity_air_green">AirGreen</string>
 
 </resources>

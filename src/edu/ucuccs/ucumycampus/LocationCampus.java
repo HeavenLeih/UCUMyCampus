@@ -56,12 +56,21 @@ public class LocationCampus extends Activity {
 				public void onClick(View arg0) {
 					// TODO Auto-generated method stub
 					// locationD = myAutoComplete.getText().toString();
-					dbcon.open();
+			
+					
+					if (myAutoComplete.getText().toString().equals(null)) {
+						Toast.makeText(getApplicationContext(),
+								"please select", Toast.LENGTH_LONG).show();
+						
+					} 
+					
+				
+					else{
+						dbcon.open();
 
-					long consave = dbcon.method_savecon(myAutoComplete
-							.getText().toString());
-
-					if (consave > 0) {
+						long consave1 = dbcon.method_savecon(myAutoComplete
+								.getText().toString());
+					 if (consave1 > 0) {
 
 						Toast.makeText(getApplicationContext(),
 								"SAVED IN HISTORY", Toast.LENGTH_LONG).show();
@@ -123,7 +132,7 @@ public class LocationCampus extends Activity {
 							Intent BadarGo = new Intent(LocationCampus.this,
 									Room24.class);
 							startActivity(BadarGo);
-						}						// //END OF BADAR BUILDING
+						} // //END OF BADAR BUILDING
 						else if (myAutoComplete.getText().toString()
 								.equals("NEW BUILDING")) {
 							Intent NewBuildingGo = new Intent(
@@ -211,27 +220,27 @@ public class LocationCampus extends Activity {
 							startActivity(Orata2Go);
 						}// FOURTH FLOOR
 						else if (myAutoComplete.getText().toString()
-								.equals("NB66")) {
+								.equals("NB 66")) {
 							Intent Orata2Go = new Intent(LocationCampus.this,
 									Nb66.class);
 							startActivity(Orata2Go);
 						} else if (myAutoComplete.getText().toString()
-								.equals("NB67")) {
+								.equals("NB 67")) {
 							Intent Orata2Go = new Intent(LocationCampus.this,
 									Nb67.class);
 							startActivity(Orata2Go);
 						} else if (myAutoComplete.getText().toString()
-								.equals("NB68")) {
+								.equals("NB 68")) {
 							Intent Orata2Go = new Intent(LocationCampus.this,
 									Nb68.class);
 							startActivity(Orata2Go);
 						} else if (myAutoComplete.getText().toString()
-								.equals("NB69")) {
+								.equals("NB 69")) {
 							Intent Orata2Go = new Intent(LocationCampus.this,
 									Nb69.class);
 							startActivity(Orata2Go);
 						} else if (myAutoComplete.getText().toString()
-								.equals("NB70")) {
+								.equals("NB 70")) {
 							Intent Orata2Go = new Intent(LocationCampus.this,
 									Nb70.class);
 							startActivity(Orata2Go);
@@ -267,8 +276,7 @@ public class LocationCampus extends Activity {
 							Intent Orata2Go = new Intent(LocationCampus.this,
 									Ap5.class);
 							startActivity(Orata2Go);
-						}
-						else if (myAutoComplete.getText().toString()
+						} else if (myAutoComplete.getText().toString()
 								.equals("ORATA 1 BUILDING")) {
 							Intent Orata1Go = new Intent(LocationCampus.this,
 									Orata1Building.class);
@@ -653,7 +661,7 @@ public class LocationCampus extends Activity {
 					} else {
 						Toast.makeText(getApplicationContext(), "NOT SAVED",
 								Toast.LENGTH_LONG).show();
-					}
+					}}
 					dbcon.close();
 				}
 			});
