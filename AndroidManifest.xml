@@ -622,6 +622,118 @@
             android:name=".AirGreen"
             android:label="@string/title_activity_air_green" >
         </activity>
+        <activity
+            android:name=".APBuilding"
+            android:label="@string/title_activity_apbuilding" >
+        </activity>
+        <activity
+            android:name=".ASBuilding2"
+            android:label="@string/title_activity_asbuilding2" >
+        </activity>
+        <activity
+            android:name=".AccountncyBuilding"
+            android:label="@string/title_activity_accountncy_building" >
+        </activity>
+        <activity
+            android:name=".ASBuilding"
+            android:label="@string/title_activity_asbuilding" >
+        </activity>
+        <activity
+            android:name=".Room34"
+            android:label="@string/title_activity_room34" >
+        </activity>
+        <activity
+            android:name=".Room35"
+            android:label="@string/title_activity_room35" >
+        </activity>
+        <activity
+            android:name=".Room36"
+            android:label="@string/title_activity_room36" >
+        </activity>
+        <activity
+            android:name=".Room37"
+            android:label="@string/title_activity_room37" >
+        </activity>
+        <activity
+            android:name=".Room38"
+            android:label="@string/title_activity_room38" >
+        </activity>
+        <activity
+            android:name=".ScienceBuilding"
+            android:label="@string/title_activity_science_building" >
+        </activity>
+        <activity
+            android:name=".Room39"
+            android:label="@string/title_activity_room39" >
+        </activity>
+        <activity
+            android:name=".Room40"
+            android:label="@string/title_activity_room40" >
+        </activity>
+        <activity
+            android:name=".Room41"
+            android:label="@string/title_activity_room41" >
+        </activity>
+        <activity
+            android:name=".Room42"
+            android:label="@string/title_activity_room42" >
+        </activity>
+        <activity
+            android:name=".Room43"
+            android:label="@string/title_activity_room43" >
+        </activity>
+        <activity
+            android:name=".Room44"
+            android:label="@string/title_activity_room44" >
+        </activity>
+        <activity
+            android:name=".Room45"
+            android:label="@string/title_activity_room45" >
+        </activity>
+        <activity
+            android:name=".DevCenter"
+            android:label="@string/title_activity_dev_center" >
+        </activity>
+        <activity
+            android:name=".ReadCenter"
+            android:label="@string/title_activity_read_center" >
+        </activity>
+        <activity
+            android:name=".FourRoomBuilding"
+            android:label="@string/title_activity_four_room_building" >
+        </activity>
+        <activity
+            android:name=".GreenHome2"
+            android:label="@string/title_activity_green_home2" >
+        </activity>
+        <activity
+            android:name=".Ob280"
+            android:label="@string/title_activity_ob280" >
+        </activity>
+        <activity
+            android:name=".Ob2L4"
+            android:label="@string/title_activity_ob2_l4" >
+        </activity>
+        <activity
+            android:name=".EngLab"
+            android:label="@string/title_activity_eng_lab" >
+        </activity>
+        <activity
+            android:name=".MP81"
+            android:label="@string/title_activity_mp81" >
+        </activity>
+        <activity
+            android:name=".MP82"
+            android:label="@string/title_activity_mp82" >
+        </activity>
+        <activity
+            android:name=".MP83"
+            android:label="@string/title_activity_mp83" >
+        </activity>
+        <activity
+            android:name=".MELab"
+            android:label="@string/title_activity_melab" >
+        </activity>
     </application>
 
 </manifest>

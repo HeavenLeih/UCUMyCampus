@@ -154,5 +154,33 @@
     <string name="title_activity_gym_air">GymAir</string>
     <string name="title_activity_gym_green">GymGreen</string>
     <string name="title_activity_air_green">AirGreen</string>
+    <string name="title_activity_apbuilding">APBuilding</string>
+    <string name="title_activity_asbuilding2">ASBuilding2</string>
+    <string name="title_activity_accountncy_building">AccountncyBuilding</string>
+    <string name="title_activity_asbuilding">ASBuilding</string>
+    <string name="title_activity_room34">Room34</string>
+    <string name="title_activity_room35">Room35</string>
+    <string name="title_activity_room36">Room36</string>
+    <string name="title_activity_room37">Room37</string>
+    <string name="title_activity_room38">Room38</string>
+    <string name="title_activity_science_building">ScienceBuilding</string>
+    <string name="title_activity_room39">Room39</string>
+    <string name="title_activity_room40">Room40</string>
+    <string name="title_activity_room41">Room41</string>
+    <string name="title_activity_room42">Room42</string>
+    <string name="title_activity_room43">Room43</string>
+    <string name="title_activity_room44">Room44</string>
+    <string name="title_activity_room45">Room45</string>
+    <string name="title_activity_dev_center">DevCenter</string>
+    <string name="title_activity_read_center">ReadCenter</string>
+    <string name="title_activity_four_room_building">FourRoomBuilding</string>
+    <string name="title_activity_green_home2">GreenHome2</string>
+    <string name="title_activity_ob280">Ob280</string>
+    <string name="title_activity_ob2_l4">Ob2L4</string>
+    <string name="title_activity_eng_lab">EngLab</string>
+    <string name="title_activity_mp81">MP81</string>
+    <string name="title_activity_mp82">MP82</string>
+    <string name="title_activity_mp83">MP83</string>
+    <string name="title_activity_melab">MELab</string>
 
 </resources>
