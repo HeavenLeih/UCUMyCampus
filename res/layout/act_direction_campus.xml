@@ -42,7 +42,7 @@
         android:background="#FFFFFF"
         android:completionThreshold="1"
         android:ems="10"
-        android:hint="  Select Destination to Search" >
+        android:hint="  Search Direction Here" >
 
         
     </edu.ucuccs.ucumycampus.CustomAutoCompleteView>
@@ -58,7 +58,7 @@
         android:background="#FFFFFF"
         android:completionThreshold="1"
         android:ems="10"
-        android:hint="  Select Location to Search" >
+        android:hint="  Search Location Here" >
         
     </edu.ucuccs.ucumycampus.CustomAutoCompleteView>
 
