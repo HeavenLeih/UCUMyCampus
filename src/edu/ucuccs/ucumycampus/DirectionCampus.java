@@ -2,6 +2,8 @@ package edu.ucuccs.ucumycampus;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -73,7 +75,23 @@ public class DirectionCampus extends Activity {
 					if (consave > 0) {
 						Toast.makeText(getApplicationContext(),
 								"SAVE IN HISTORY", Toast.LENGTH_LONG).show();
-						DadarToBuilding();
+
+						searchDadarToBuilding();
+						searchAVRToBuilding();
+						searchArtsBuilding2ToBuilding();
+						searchHonnasanHallToBuilding();
+						searchAccountancyToBuilding();
+						searchBadarBuildingToBuilding();
+						searchArtsToBuilding();
+						searchScienceBuiltingToBuilding();
+						searchDevelopmentCenterToBuilding();
+						searchReadingCenter();
+						searchFourRoomBuildingToBuilding();
+						searchNewBuildingToBuilding();
+						searchGreenhome2ToBuilding();
+						searchOrata2BuildingToBuilding();
+						searchOrataBuildingToBuilding();
+						searchAirPlaneToBuilding();
 
 					} else {
 
@@ -309,16 +327,20 @@ public class DirectionCampus extends Activity {
 
 	}
 
-	public void DadarToBuilding() {
-
+	public void searchDadarToBuilding() {
+		Bitmap NB61bitmap = BitmapFactory.decodeResource(getResources(),
+				R.drawable.ic_launcher);
+		
 		if (((myAutoCompleteLoc.getText().toString()
 				.equals("AMADEO PEREZ BUILDING")) && (myAutoCompleteDir
 				.getText().toString().equals("AVR/ AUDIO VISUAL ROOM")))
 				|| ((myAutoCompleteDir.getText().toString()
 						.equals("AMADEO PEREZ BUILDING")) && (myAutoCompleteLoc
 						.getText().toString().equals("AVR/ AUDIO VISUAL ROOM")))) {
-			Toast.makeText(getApplicationContext(), "no direction yet",
-					Toast.LENGTH_LONG).show();
+			Intent intent = new Intent();
+			intent.setClass(DirectionCampus.this, ImageViewingLocation.class);
+			intent.putExtra("Bitmap", NB61bitmap);
+			startActivity(intent);
 		} else if (((myAutoCompleteLoc.getText().toString()
 				.equals("AMADEO PEREZ BUILDING")) && (myAutoCompleteDir
 				.getText().toString().equals("ARTS AND SCIENCES BUILDING 2")))
@@ -397,7 +419,7 @@ public class DirectionCampus extends Activity {
 
 	}
 
-	public void AVRToBuilding() {
+	public void searchAVRToBuilding() {
 		if (((myAutoCompleteLoc.getText().toString()
 				.equals("AVR/ AUDIO VISUAL ROOM")) && (myAutoCompleteDir
 				.getText().toString().equals("ARTS AND SCIENCES BUILDING 2")))
@@ -476,7 +498,7 @@ public class DirectionCampus extends Activity {
 		}
 	}
 
-	public void ArtsBuilding2ToBuilding() {
+	public void searchArtsBuilding2ToBuilding() {
 
 		if (((myAutoCompleteLoc.getText().toString()
 				.equals("ARTS AND SCIENCES BUILDING 2")) && (myAutoCompleteDir
@@ -546,70 +568,56 @@ public class DirectionCampus extends Activity {
 		}
 	}
 
-	public void HonnasanHallToBuilding() {
+	public void searchHonnasanHallToBuilding() {
 
 		if (((myAutoCompleteLoc.getText().toString().equals("HONNASAN HALL")) && (myAutoCompleteDir
 				.getText().toString().equals("ORATA BUILDING")))
 				|| ((myAutoCompleteDir.getText().toString()
 						.equals("HONNASAN HALL")) && (myAutoCompleteLoc
 						.getText().toString().equals("ORATA BUILDING")))) {
-			Intent HonnasanGo = new Intent(DirectionCampus.this,
-					HonasanOrata1.class);
-			startActivity(HonnasanGo);
+
 		} else if (((myAutoCompleteLoc.getText().toString()
 				.equals("HONNASAN HALL")) && (myAutoCompleteDir.getText()
 				.toString().equals("ORATA 2 BUILDING")))
 				|| ((myAutoCompleteDir.getText().toString()
 						.equals("HONNASAN HALL")) && (myAutoCompleteLoc
 						.getText().toString().equals("ORATA 2 BUILDING")))) {
-			Intent HonnasanGo = new Intent(DirectionCampus.this,
-					HonasanOrata2.class);
-			startActivity(HonnasanGo);
+
 		} else if (((myAutoCompleteLoc.getText().toString()
 				.equals("HONNASAN HALL")) && (myAutoCompleteDir.getText()
 				.toString().equals("NEW BUILDING")))
 				|| ((myAutoCompleteDir.getText().toString()
 						.equals("HONNASAN HALL")) && (myAutoCompleteLoc
 						.getText().toString().equals("NEW BUILDING")))) {
-			Intent HonnasanGo = new Intent(DirectionCampus.this,
-					HonasanNewBuilding.class);
-			startActivity(HonnasanGo);
+
 		} else if (((myAutoCompleteLoc.getText().toString()
 				.equals("HONNASAN HALL")) && (myAutoCompleteDir.getText()
 				.toString().equals("GYMNASIUM")))
 				|| ((myAutoCompleteDir.getText().toString()
 						.equals("HONNASAN HALL")) && (myAutoCompleteLoc
 						.getText().toString().equals("GYMNASIUM")))) {
-			Intent HonnasanGo = new Intent(DirectionCampus.this,
-					HonasanGymnasium.class);
-			startActivity(HonnasanGo);
+
 		} else if (((myAutoCompleteLoc.getText().toString()
 				.equals("HONNASAN HALL")) && (myAutoCompleteDir.getText()
 				.toString().equals("BADAR BUILDING")))
 				|| ((myAutoCompleteDir.getText().toString()
 						.equals("HONNASAN HALL")) && (myAutoCompleteLoc
 						.getText().toString().equals("BADAR BUILDING")))) {
-			Intent HonnasanGo = new Intent(DirectionCampus.this,
-					HonasanBadar.class);
-			startActivity(HonnasanGo);
+
 		} else if (((myAutoCompleteLoc.getText().toString()
 				.equals("HONNASAN HALL")) && (myAutoCompleteDir.getText()
 				.toString().equals("AIRPLANE")))
 				|| ((myAutoCompleteDir.getText().toString()
 						.equals("HONNASAN HALL")) && (myAutoCompleteLoc
 						.getText().toString().equals("AIRPLANE")))) {
-			Intent HonnasanGo = new Intent(DirectionCampus.this,
-					HonasanAir.class);
-			startActivity(HonnasanGo);
+
 		} else if (((myAutoCompleteLoc.getText().toString()
 				.equals("HONNASAN HALL")) && (myAutoCompleteDir.getText()
 				.toString().equals("GREENHOME")))
 				|| ((myAutoCompleteDir.getText().toString()
 						.equals("HONNASAN HALL")) && (myAutoCompleteLoc
 						.getText().toString().equals("GREENHOME")))) {
-			Intent HonnasanGo = new Intent(DirectionCampus.this,
-					HonasanGreen.class);
-			startActivity(HonnasanGo);
+
 		} else if (((myAutoCompleteLoc.getText().toString()
 				.equals("HONNASAN HALL")) && (myAutoCompleteDir.getText()
 				.toString().equals("AMADEO PEREZ BUILDING")))
@@ -704,7 +712,7 @@ public class DirectionCampus extends Activity {
 		}
 	}
 
-	public void AccountancyToBuilding() {
+	public void searchAccountancyToBuilding() {
 		if (((myAutoCompleteLoc.getText().toString()
 				.equals("ACCOUNTANCY BUILDING")) && (myAutoCompleteDir
 				.getText().toString().equals("ARTS AND SCIENCES BUILDING")))
@@ -765,58 +773,49 @@ public class DirectionCampus extends Activity {
 		}
 	}
 
-	public void BadarBuildingToBuilding() {
+	public void searchBadarBuildingToBuilding() {
 
 		if (((myAutoCompleteLoc.getText().toString().equals("BADAR BUILDING")) && (myAutoCompleteDir
 				.getText().toString().equals("ORATA BUILDING")))
 				|| ((myAutoCompleteDir.getText().toString()
 						.equals("BADAR BUILDING")) && (myAutoCompleteLoc
 						.getText().toString().equals("ORATA BUILDING")))) {
-			Intent HonnasanGo = new Intent(DirectionCampus.this,
-					BadarOrata1.class);
-			startActivity(HonnasanGo);
+
 		} else if (((myAutoCompleteLoc.getText().toString()
 				.equals("BADAR BUILDING")) && (myAutoCompleteDir.getText()
 				.toString().equals("ORATA 2 BUILDING")))
 				|| ((myAutoCompleteDir.getText().toString()
 						.equals("BADAR BUILDING")) && (myAutoCompleteLoc
 						.getText().toString().equals("ORATA 2 BUILDING")))) {
-			Intent HonnasanGo = new Intent(DirectionCampus.this,
-					BadarOrata2.class);
-			startActivity(HonnasanGo);
+
 		} else if (((myAutoCompleteLoc.getText().toString()
 				.equals("BADAR BUILDING")) && (myAutoCompleteDir.getText()
 				.toString().equals("NEW BUILDING")))
 				|| ((myAutoCompleteDir.getText().toString()
 						.equals("BADAR BUILDING")) && (myAutoCompleteLoc
 						.getText().toString().equals("NEW BUILDING")))) {
-			Intent HonnasanGo = new Intent(DirectionCampus.this, BadarNew.class);
-			startActivity(HonnasanGo);
+
 		} else if (((myAutoCompleteLoc.getText().toString()
 				.equals("BADAR BUILDING")) && (myAutoCompleteDir.getText()
 				.toString().equals("GYMNASIUM")))
 				|| ((myAutoCompleteDir.getText().toString()
 						.equals("BADAR BUILDING")) && (myAutoCompleteLoc
 						.getText().toString().equals("GYMNASIUM")))) {
-			Intent HonnasanGo = new Intent(DirectionCampus.this, BadarGym.class);
-			startActivity(HonnasanGo);
+
 		} else if (((myAutoCompleteLoc.getText().toString()
 				.equals("BADAR BUILDING")) && (myAutoCompleteDir.getText()
 				.toString().equals("AIRPLANE")))
 				|| ((myAutoCompleteDir.getText().toString()
 						.equals("BADAR BUILDING")) && (myAutoCompleteLoc
 						.getText().toString().equals("AIRPLANE")))) {
-			Intent HonnasanGo = new Intent(DirectionCampus.this, BadarAir.class);
-			startActivity(HonnasanGo);
+
 		} else if (((myAutoCompleteLoc.getText().toString()
 				.equals("BADAR BUILDING")) && (myAutoCompleteDir.getText()
 				.toString().equals("GREENHOME")))
 				|| ((myAutoCompleteDir.getText().toString()
 						.equals("BADAR BUILDING")) && (myAutoCompleteLoc
 						.getText().toString().equals("GREENHOME")))) {
-			Intent HonnasanGo = new Intent(DirectionCampus.this,
-					BadarGreen.class);
-			startActivity(HonnasanGo);
+
 		} else if (((myAutoCompleteLoc.getText().toString()
 				.equals("BADAR BUILDING")) && (myAutoCompleteDir.getText()
 				.toString().equals("AMADEO PEREZ BUILDING")))
@@ -910,7 +909,7 @@ public class DirectionCampus extends Activity {
 		}
 	}
 
-	public void ArtsToBuilding() {
+	public void searchArtsToBuilding() {
 		if (((myAutoCompleteLoc.getText().toString()
 				.equals("ARTS AND SCIENCES BUILDINGG")) && (myAutoCompleteDir
 				.getText().toString().equals("SCIENCE BUILDING")))
@@ -962,7 +961,7 @@ public class DirectionCampus extends Activity {
 		}
 	}
 
-	public void ScienceBuiltingToBuilding() {
+	public void searchScienceBuiltingToBuilding() {
 
 		if (((myAutoCompleteLoc.getText().toString().equals("SCIENCE BUILDING")) && (myAutoCompleteDir
 				.getText().toString().equals("DEVELOPMENT CENTER")))
@@ -1006,7 +1005,7 @@ public class DirectionCampus extends Activity {
 		}
 	}
 
-	public void DevelopmentCenterToBuilding() {
+	public void searchDevelopmentCenterToBuilding() {
 
 		if (((myAutoCompleteLoc.getText().toString()
 				.equals("DEVELOPMENT CENTER")) && (myAutoCompleteDir.getText()
@@ -1043,7 +1042,7 @@ public class DirectionCampus extends Activity {
 		}
 	}
 
-	public void ReadingCenter() {
+	public void searchReadingCenter() {
 
 		if (((myAutoCompleteLoc.getText().toString().equals("READING CENTER")) && (myAutoCompleteDir
 				.getText().toString().equals("FOUR ROOMS BUILDING")))
@@ -1071,7 +1070,7 @@ public class DirectionCampus extends Activity {
 		}
 	}
 
-	public void FourRoomBuildingToBuilding() {
+	public void searchFourRoomBuildingToBuilding() {
 		if (((myAutoCompleteLoc.getText().toString()
 				.equals("FOUR ROOMS BUILDING")) && (myAutoCompleteDir.getText()
 				.toString().equals("GREENHOME 2")))
@@ -1092,31 +1091,28 @@ public class DirectionCampus extends Activity {
 		}
 	}
 
-	public void NewBuildingToBuilding() {
+	public void searchNewBuildingToBuilding() {
 
 		if (((myAutoCompleteLoc.getText().toString().equals("NEW BUILDING")) && (myAutoCompleteDir
 				.getText().toString().equals("GYMNASIUM")))
 				|| ((myAutoCompleteDir.getText().toString()
 						.equals("NEW BUILDING")) && (myAutoCompleteLoc
 						.getText().toString().equals("GYMNASIUM")))) {
-			Intent HonnasanGo = new Intent(DirectionCampus.this, NewGym.class);
-			startActivity(HonnasanGo);
+
 		} else if (((myAutoCompleteLoc.getText().toString()
 				.equals("NEW BUILDING")) && (myAutoCompleteDir.getText()
 				.toString().equals("AIRPLANE")))
 				|| ((myAutoCompleteDir.getText().toString()
 						.equals("NEW BUILDING")) && (myAutoCompleteLoc
 						.getText().toString().equals("AIRPLANE")))) {
-			Intent HonnasanGo = new Intent(DirectionCampus.this, NewAir.class);
-			startActivity(HonnasanGo);
+
 		} else if (((myAutoCompleteLoc.getText().toString()
 				.equals("NEW BUILDING")) && (myAutoCompleteDir.getText()
 				.toString().equals("GREENHOME")))
 				|| ((myAutoCompleteDir.getText().toString()
 						.equals("NEW BUILDING")) && (myAutoCompleteLoc
 						.getText().toString().equals("GREENHOME")))) {
-			Intent HonnasanGo = new Intent(DirectionCampus.this, NewGreen.class);
-			startActivity(HonnasanGo);
+
 		} else if (((myAutoCompleteLoc.getText().toString()
 				.equals("NEW BUILDING")) && (myAutoCompleteDir.getText()
 				.toString().equals("AMADEO PEREZ BUILDING")))
@@ -1210,7 +1206,7 @@ public class DirectionCampus extends Activity {
 		}
 	}
 
-	public void Greenhome2ToBuilding() {
+	public void searchGreenhome2ToBuilding() {
 		if (((myAutoCompleteLoc.getText().toString().equals("GREENHOME 2")) && (myAutoCompleteDir
 				.getText().toString().equals("ENGINEERING LABORATORY")))
 				|| ((myAutoCompleteDir.getText().toString()
@@ -1221,42 +1217,34 @@ public class DirectionCampus extends Activity {
 		}
 	}
 
-	public void Orata2BuildingToBuilding() {
+	public void searchOrata2BuildingToBuilding() {
 		if (((myAutoCompleteLoc.getText().toString().equals("ORATA 2 BUILDING")) && (myAutoCompleteDir
 				.getText().toString().equals("NEW BUILDING")))
 				|| ((myAutoCompleteDir.getText().toString()
 						.equals("ORATA 2 BUILDING")) && (myAutoCompleteLoc
 						.getText().toString().equals("NEW BUILDING")))) {
-			Intent HonnasanGo = new Intent(DirectionCampus.this,
-					Orata2New.class);
-			startActivity(HonnasanGo);
+
 		} else if (((myAutoCompleteLoc.getText().toString()
 				.equals("ORATA 2 BUILDING")) && (myAutoCompleteDir.getText()
 				.toString().equals("GYMNASIUM")))
 				|| ((myAutoCompleteDir.getText().toString()
 						.equals("ORATA 2 BUILDING")) && (myAutoCompleteLoc
 						.getText().toString().equals("GYMNASIUM")))) {
-			Intent HonnasanGo = new Intent(DirectionCampus.this,
-					Orata2Gym.class);
-			startActivity(HonnasanGo);
+
 		} else if (((myAutoCompleteLoc.getText().toString()
 				.equals("ORATA 2 BUILDING")) && (myAutoCompleteDir.getText()
 				.toString().equals("AIRPLANE")))
 				|| ((myAutoCompleteDir.getText().toString()
 						.equals("ORATA 2 BUILDING")) && (myAutoCompleteLoc
 						.getText().toString().equals("AIRPLANE")))) {
-			Intent HonnasanGo = new Intent(DirectionCampus.this,
-					Orata2Air.class);
-			startActivity(HonnasanGo);
+
 		} else if (((myAutoCompleteLoc.getText().toString()
 				.equals("ORATA 2 BUILDING")) && (myAutoCompleteDir.getText()
 				.toString().equals("GREENHOME")))
 				|| ((myAutoCompleteDir.getText().toString()
 						.equals("ORATA 2 BUILDING")) && (myAutoCompleteLoc
 						.getText().toString().equals("GREENHOME")))) {
-			Intent HonnasanGo = new Intent(DirectionCampus.this,
-					Orata2Green.class);
-			startActivity(HonnasanGo);
+
 		} else if (((myAutoCompleteLoc.getText().toString()
 				.equals("ORATA 2 BUILDING")) && (myAutoCompleteDir.getText()
 				.toString().equals("AMADEO PEREZ BUILDING")))
@@ -1351,52 +1339,42 @@ public class DirectionCampus extends Activity {
 
 	}
 
-	public void OrataBuildingToBuilding() {
+	public void searchOrataBuildingToBuilding() {
 
 		if (((myAutoCompleteLoc.getText().toString().equals("ORATA BUILDING")) && (myAutoCompleteDir
 				.getText().toString().equals("ORATA 2 BUILDING")))
 				|| ((myAutoCompleteDir.getText().toString()
 						.equals("ORATA BUILDING")) && (myAutoCompleteLoc
 						.getText().toString().equals("ORATA 2 BUILDING")))) {
-			Intent HonnasanGo = new Intent(DirectionCampus.this,
-					Orata1Orata2.class);
-			startActivity(HonnasanGo);
+
 		} else if (((myAutoCompleteLoc.getText().toString()
 				.equals("ORATA BUILDING")) && (myAutoCompleteDir.getText()
 				.toString().equals("NEW BUILDING")))
 				|| ((myAutoCompleteDir.getText().toString()
 						.equals("ORATA BUILDING")) && (myAutoCompleteLoc
 						.getText().toString().equals("NEW BUILDING")))) {
-			Intent HonnasanGo = new Intent(DirectionCampus.this,
-					Orata1New.class);
-			startActivity(HonnasanGo);
+
 		} else if (((myAutoCompleteLoc.getText().toString()
 				.equals("ORATA BUILDING")) && (myAutoCompleteDir.getText()
 				.toString().equals("GYMNASIUM")))
 				|| ((myAutoCompleteDir.getText().toString()
 						.equals("ORATA BUILDING")) && (myAutoCompleteLoc
 						.getText().toString().equals("GYMNASIUM")))) {
-			Intent HonnasanGo = new Intent(DirectionCampus.this,
-					Orata1Gym.class);
-			startActivity(HonnasanGo);
+
 		} else if (((myAutoCompleteLoc.getText().toString()
 				.equals("ORATA BUILDING")) && (myAutoCompleteDir.getText()
 				.toString().equals("AIRPLANE")))
 				|| ((myAutoCompleteDir.getText().toString()
 						.equals("ORATA BUILDING")) && (myAutoCompleteLoc
 						.getText().toString().equals("AIRPLANE")))) {
-			Intent HonnasanGo = new Intent(DirectionCampus.this,
-					Orata1Air.class);
-			startActivity(HonnasanGo);
+
 		} else if (((myAutoCompleteLoc.getText().toString()
 				.equals("ORATA BUILDING")) && (myAutoCompleteDir.getText()
 				.toString().equals("GREENHOME")))
 				|| ((myAutoCompleteDir.getText().toString()
 						.equals("ORATA BUILDING")) && (myAutoCompleteLoc
 						.getText().toString().equals("GREENHOME")))) {
-			Intent HonnasanGo = new Intent(DirectionCampus.this,
-					Orata1Green.class);
-			startActivity(HonnasanGo);
+
 		} else if (((myAutoCompleteLoc.getText().toString()
 				.equals("ORATA BUILDING")) && (myAutoCompleteDir.getText()
 				.toString().equals("AMADEO PEREZ BUILDING")))
@@ -1490,13 +1468,12 @@ public class DirectionCampus extends Activity {
 		}
 	}
 
-	public void AirPlaneToBuilding() {
+	public void searchAirPlaneToBuilding() {
 		if (((myAutoCompleteLoc.getText().toString().equals("AIRPLANE")) && (myAutoCompleteDir
 				.getText().toString().equals("GREENHOME")))
 				|| ((myAutoCompleteDir.getText().toString().equals("AIRPLANE")) && (myAutoCompleteLoc
 						.getText().toString().equals("GREENHOME")))) {
-			Intent HonnasanGo = new Intent(DirectionCampus.this, AirGreen.class);
-			startActivity(HonnasanGo);
+
 		} else if (((myAutoCompleteLoc.getText().toString().equals("AIRPLANE")) && (myAutoCompleteDir
 				.getText().toString().equals("AMADEO PEREZ BUILDING")))
 				|| ((myAutoCompleteDir.getText().toString().equals("AIRPLANE")) && (myAutoCompleteLoc

@@ -2,6 +2,8 @@ package edu.ucuccs.ucumycampus;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -57,690 +59,46 @@ public class LocationCampus extends Activity {
 					// TODO Auto-generated method stub
 					// locationD = myAutoComplete.getText().toString();
 
-					if (myAutoComplete.getText().toString().equals(null)) {
+					dbcon.open();
+
+					long consave1 = dbcon.method_savecon(myAutoComplete
+							.getText().toString());
+
+					if (consave1 > 0) {
+
 						Toast.makeText(getApplicationContext(),
-								"please select", Toast.LENGTH_LONG).show();
+								"SAVED IN HISTORY", Toast.LENGTH_LONG).show();
 
+						// METHOD FOR ALL BUILDINGS AND CLASSROOMS
+						searchHonasanHallBuilding();
+						searchAmadeoPerezBuilding();
+						searchArtsAndScienceBuilding2();
+						searchAccountancyBuilding();
+						searchBadarBuilding();
+						searchArtsAndScienceBuilding();
+						searchScienceBuilding();
+						searchRooms44_45();
+						searchDevRead();
+						searchFourRoomsBuilding();
+						searchNewBuilding();
+						searchGreenHome();
+						searchOrataBuilding();
+						searchOrata2Building();
+						searchAirplane();
+						searchAVR();
+						searchCrime();
+						searchGym();
+						searchEngineeringLab();
+
+					} else {
+						Toast.makeText(getApplicationContext(), "NOT SAVED",
+								Toast.LENGTH_LONG).show();
 					}
 
-					else {
-						dbcon.open();
-
-						long consave1 = dbcon.method_savecon(myAutoComplete
-								.getText().toString());
-
-						if (consave1 > 0) {
-
-							Toast.makeText(getApplicationContext(),
-									"SAVED IN HISTORY", Toast.LENGTH_LONG)
-									.show();
-
-							if (myAutoComplete.getText().toString()
-									.equals("HONNASAN HALL")) {
-								Intent HonnasanGo = new Intent(
-										LocationCampus.this,
-										HonnasanHallCampus.class);
-								startActivity(HonnasanGo);
-								// //////////////////////////////////////////////////////////
-							} else if (myAutoComplete.getText().toString()
-									.equals("AMADEO PEREZ BUILDING")) {
-								Intent HonnasanGo = new Intent(
-										LocationCampus.this, APBuilding.class);
-								startActivity(HonnasanGo);
-							} else if (myAutoComplete.getText().toString()
-									.equals("ROOM 1")) {
-								Intent Room1Go = new Intent(
-										LocationCampus.this, Room1.class);
-								startActivity(Room1Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("ROOM 2")) {
-								Intent Room1Go = new Intent(
-										LocationCampus.this, Room2.class);
-								startActivity(Room1Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("ROOM 3")) {
-								Intent Room1Go = new Intent(
-										LocationCampus.this, Room3.class);
-								startActivity(Room1Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("ROOM 4")) {
-								Intent Room1Go = new Intent(
-										LocationCampus.this, Room4.class);
-								startActivity(Room1Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("ROOM 5")) {
-								Intent Room1Go = new Intent(
-										LocationCampus.this, Room5.class);
-								startActivity(Room1Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("ROOM 6")) {
-								Intent Room1Go = new Intent(
-										LocationCampus.this, Room6.class);
-								startActivity(Room1Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("ROOM 8")) {
-								Intent Room1Go = new Intent(
-										LocationCampus.this, Room8.class);
-								startActivity(Room1Go);
-								// ////////////////////////////////////////////////////
-							} else if (myAutoComplete.getText().toString()
-									.equals("ARTS AND SCIENCES BUILDING 2")) {
-								Intent Room1Go = new Intent(
-										LocationCampus.this, ASBuilding2.class);
-								startActivity(Room1Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("ROOM 9")) {
-								Intent Room1Go = new Intent(
-										LocationCampus.this, Room9.class);
-								startActivity(Room1Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("ROOM 10")) {
-								Intent Room1Go = new Intent(
-										LocationCampus.this, Room10.class);
-								startActivity(Room1Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("ROOM 11")) {
-								Intent Room1Go = new Intent(
-										LocationCampus.this, Room11.class);
-								startActivity(Room1Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("ROOM 12")) {
-								Intent Room1Go = new Intent(
-										LocationCampus.this, Room12.class);
-								startActivity(Room1Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("ROOM 13")) {
-								Intent Room1Go = new Intent(
-										LocationCampus.this, Room13.class);
-								startActivity(Room1Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("ROOM 14")) {
-								Intent Room1Go = new Intent(
-										LocationCampus.this, Room14.class);
-								startActivity(Room1Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("ROOM 15")) {
-								Intent Room1Go = new Intent(
-										LocationCampus.this, Room15.class);
-								startActivity(Room1Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("ROOM 16")) {
-								Intent Room1Go = new Intent(
-										LocationCampus.this, Room16.class);
-								startActivity(Room1Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("NSTP ROOM")) {
-								Intent Room1Go = new Intent(
-										LocationCampus.this, NSTP_ROOM.class);
-								startActivity(Room1Go);
-								// /////////////////////////////////////////////////////////////
-							} else if (myAutoComplete.getText().toString()
-									.equals("ACCOUNTANCY BUILDING")) {
-								Intent HonnasanGo = new Intent(
-										LocationCampus.this,
-										AccountncyBuilding.class);
-								startActivity(HonnasanGo);
-							} else if (myAutoComplete.getText().toString()
-									.equals("A17")) {
-								Intent HonnasanGo = new Intent(
-										LocationCampus.this, Room17A.class);
-								startActivity(HonnasanGo);
-							} else if (myAutoComplete.getText().toString()
-									.equals("A18")) {
-								Intent HonnasanGo = new Intent(
-										LocationCampus.this, Room18A.class);
-								startActivity(HonnasanGo);
-							} else if (myAutoComplete.getText().toString()
-									.equals("A19")) {
-								Intent HonnasanGo = new Intent(
-										LocationCampus.this, Room19A.class);
-								startActivity(HonnasanGo);
-							} else if (myAutoComplete.getText().toString()
-									.equals("A20")) {
-								Intent HonnasanGo = new Intent(
-										LocationCampus.this, Room20A.class);
-								startActivity(HonnasanGo);
-								// //////////////////////////////////////////////////////////////////
-							} else if (myAutoComplete.getText().toString()
-									.equals("BADAR BUILDING")) {
-								Intent BadarGo = new Intent(
-										LocationCampus.this,
-										BadarBuildingCampus.class);
-								startActivity(BadarGo);
-							} else if (myAutoComplete.getText().toString()
-									.equals("B21")) {
-								Intent BadarGo = new Intent(
-										LocationCampus.this, Room21.class);
-								startActivity(BadarGo);
-							} else if (myAutoComplete.getText().toString()
-									.equals("B22")) {
-								Intent BadarGo = new Intent(
-										LocationCampus.this, Room22.class);
-								startActivity(BadarGo);
-							} else if (myAutoComplete.getText().toString()
-									.equals("B23")) {
-								Intent BadarGo = new Intent(
-										LocationCampus.this, Room23.class);
-								startActivity(BadarGo);
-							} else if (myAutoComplete.getText().toString()
-									.equals("B24")) {
-								Intent BadarGo = new Intent(
-										LocationCampus.this, Room24.class);
-								startActivity(BadarGo);
-								// ///////////////////////////////////////////////////////
-							} else if (myAutoComplete.getText().toString()
-									.equals("ARTS AND SCIENCES BUILDING")) {
-								Intent NewBuildingGo = new Intent(
-										LocationCampus.this, ASBuilding.class);
-								startActivity(NewBuildingGo);
-							} else if (myAutoComplete.getText().toString()
-									.equals("29")) {
-								Intent Room1Go = new Intent(
-										LocationCampus.this, Room29.class);
-								startActivity(Room1Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("30 TYPING LABORATORY")) {
-								Intent Room1Go = new Intent(
-										LocationCampus.this, TypingRoom.class);
-								startActivity(Room1Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("31")) {
-								Intent Room1Go = new Intent(
-										LocationCampus.this, Room31.class);
-								startActivity(Room1Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("32 BAKING LABORATORY")) {
-								Intent Room1Go = new Intent(
-										LocationCampus.this, Baking_Room.class);
-								startActivity(Room1Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("33CCLab2")) {
-								Intent Room1Go = new Intent(
-										LocationCampus.this,
-										CommercialCooking.class);
-								startActivity(Room1Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("34")) {
-								Intent Room1Go = new Intent(
-										LocationCampus.this, Room34.class);
-								startActivity(Room1Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("35")) {
-								Intent Room1Go = new Intent(
-										LocationCampus.this, Room35.class);
-								startActivity(Room1Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("36CGLab")) {
-								Intent Room1Go = new Intent(
-										LocationCampus.this, Room36.class);
-								startActivity(Room1Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("37FBSLab")) {
-								Intent Room1Go = new Intent(
-										LocationCampus.this, Room37.class);
-								startActivity(Room1Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("38CCLab")) {
-								Intent Room1Go = new Intent(
-										LocationCampus.this, Room38.class);
-								startActivity(Room1Go);
-								// //////////////////////////////////////////////////////////////////
-							} else if (myAutoComplete.getText().toString()
-									.equals("SCIENCE BUILDING")) {
-								Intent Orata2Go = new Intent(
-										LocationCampus.this,
-										ScienceBuilding.class);
-								startActivity(Orata2Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("39 SL4")) {
-								Intent Orata2Go = new Intent(
-										LocationCampus.this, Room39.class);
-								startActivity(Orata2Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("40 SL5")) {
-								Intent Orata2Go = new Intent(
-										LocationCampus.this, Room40.class);
-								startActivity(Orata2Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("41 CLINICAL SKILLS LAB")) {
-								Intent Orata2Go = new Intent(
-										LocationCampus.this, Room41.class);
-								startActivity(Orata2Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("42 CLINICAL SKILLS LAB")) {
-								Intent Orata2Go = new Intent(
-										LocationCampus.this, Room42.class);
-								startActivity(Orata2Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("43 CLINICAL SKILLS LAB")) {
-								Intent Orata2Go = new Intent(
-										LocationCampus.this, Room43.class);
-								startActivity(Orata2Go);
-								// ////////////////////////////////////////////////////////////////////
-							} else if (myAutoComplete.getText().toString()
-									.equals("44")) {
-								Intent Orata2Go = new Intent(
-										LocationCampus.this, Room44.class);
-								startActivity(Orata2Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("45")) {
-								Intent Orata2Go = new Intent(
-										LocationCampus.this, Room45.class);
-								startActivity(Orata2Go);
-								// ///////////////////////////////////////////////////////////////////
-							} else if (myAutoComplete.getText().toString()
-									.equals("DEVELOPMENT CENTER")) {
-								Intent Orata2Go = new Intent(
-										LocationCampus.this, DevCenter.class);
-								startActivity(Orata2Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("READING CENTER")) {
-								Intent Orata2Go = new Intent(
-										LocationCampus.this, ReadCenter.class);
-								startActivity(Orata2Go);
-								// /////////////////////////////////////////////////////////////////
-							} else if (myAutoComplete.getText().toString()
-									.equals("FOUR ROOMS BUILDING")) {
-								Intent Room1Go = new Intent(
-										LocationCampus.this,
-										FourRoomBuilding.class);
-								startActivity(Room1Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("ROOM 48")) {
-								Intent Room1Go = new Intent(
-										LocationCampus.this, Room48.class);
-								startActivity(Room1Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("ROOM 49")) {
-								Intent Room1Go = new Intent(
-										LocationCampus.this, Room49.class);
-								startActivity(Room1Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("ROOM 50")) {
-								Intent Room1Go = new Intent(
-										LocationCampus.this, Room50.class);
-								startActivity(Room1Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("ROOM 51")) {
-								Intent Room1Go = new Intent(
-										LocationCampus.this, Room51.class);
-								startActivity(Room1Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("ROOM 47B")) {
-								Intent Room1Go = new Intent(
-										LocationCampus.this, Room47B.class);
-								startActivity(Room1Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("ROOM 47A")) {
-								Intent Room1Go = new Intent(
-										LocationCampus.this, Room47A.class);
-								startActivity(Room1Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("46 SOCIAL WORK")) {
-								Intent Room1Go = new Intent(
-										LocationCampus.this, SocialWork.class);
-								startActivity(Room1Go);
-								// /////////////////////////////////////////////////////////////////
-							} else if (myAutoComplete.getText().toString()
-									.equals("NEW BUILDING")) {
-								Intent Orata2Go = new Intent(
-										LocationCampus.this,
-										NewBuildingCampus.class);
-								startActivity(Orata2Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("CHEMICAL LABORATORY")) {
-								Intent Orata2Go = new Intent(
-										LocationCampus.this, ChemicalLaboratory.class);
-								startActivity(Orata2Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("NB52")) {
-								Intent Orata2Go = new Intent(
-										LocationCampus.this, Nb52.class);
-								startActivity(Orata2Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("NB53 BioLab")) {
-								Intent Orata2Go = new Intent(
-										LocationCampus.this, Nb53.class);
-								startActivity(Orata2Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("NB54 CHLab")) {
-								Intent Orata2Go = new Intent(
-										LocationCampus.this, Nb54.class);
-								startActivity(Orata2Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("NB55 PHLab")) {
-								Intent Orata2Go = new Intent(
-										LocationCampus.this, Nb55.class);
-								startActivity(Orata2Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("NB56")) {
-								Intent Orata2Go = new Intent(
-										LocationCampus.this, Nb56.class);
-								startActivity(Orata2Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("NB57")) {
-								Intent Orata2Go = new Intent(
-										LocationCampus.this, Nb57.class);
-								startActivity(Orata2Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("NB58")) {
-								Intent Orata2Go = new Intent(
-										LocationCampus.this, Nb58.class);
-								startActivity(Orata2Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("NB59")) {
-								Intent Orata2Go = new Intent(
-										LocationCampus.this, Nb59.class);
-								startActivity(Orata2Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("NB60")) {
-								Intent Orata2Go = new Intent(
-										LocationCampus.this, Nb60.class);
-								startActivity(Orata2Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("NB61 COMPLAB")) {
-								Intent Orata2Go = new Intent(
-										LocationCampus.this, Nb61.class);
-								startActivity(Orata2Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("NB62 COMPLAB")) {
-								Intent Orata2Go = new Intent(
-										LocationCampus.this, Nb62.class);
-								startActivity(Orata2Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("NB63 COMPLAB")) {
-								Intent Orata2Go = new Intent(
-										LocationCampus.this, Nb63.class);
-								startActivity(Orata2Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("NB64 COMPLAB")) {
-								Intent Orata2Go = new Intent(
-										LocationCampus.this, Nb64.class);
-								startActivity(Orata2Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("NB65 COMPLAB")) {
-								Intent Orata2Go = new Intent(
-										LocationCampus.this, Nb65.class);
-								startActivity(Orata2Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("NB66")) {
-								Intent Orata2Go = new Intent(
-										LocationCampus.this, Nb66.class);
-								startActivity(Orata2Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("NB67")) {
-								Intent Orata2Go = new Intent(
-										LocationCampus.this, Nb67.class);
-								startActivity(Orata2Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("NB68")) {
-								Intent Orata2Go = new Intent(
-										LocationCampus.this, Nb68.class);
-								startActivity(Orata2Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("NB69")) {
-								Intent Orata2Go = new Intent(
-										LocationCampus.this, Nb69.class);
-								startActivity(Orata2Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("NB70")) {
-								Intent Orata2Go = new Intent(
-										LocationCampus.this, Nb70.class);
-								startActivity(Orata2Go);
-								// ////////////////////////////////////////////////////////////
-							} else if (myAutoComplete.getText().toString()
-									.equals("GREENHOME")) {
-								Intent Room1Go = new Intent(
-										LocationCampus.this, GreenHome.class);
-								startActivity(Room1Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("GREENHOME 2")) {
-								Intent Room1Go = new Intent(
-										LocationCampus.this, GreenHome2.class);
-								startActivity(Room1Go);
-								// ///////////////////////////////////////////////////////
-							} else if (myAutoComplete.getText().toString()
-									.equals("ORATA BUILDING")) {
-								Intent Orata1Go = new Intent(
-										LocationCampus.this,
-										Orata1Building.class);
-								startActivity(Orata1Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("OB 71")) {
-								Intent Orata2Go = new Intent(
-										LocationCampus.this, Ob71.class);
-								startActivity(Orata2Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("OB 72")) {
-								Intent Orata2Go = new Intent(
-										LocationCampus.this, Ob72.class);
-								startActivity(Orata2Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("OB 73")) {
-								Intent Orata2Go = new Intent(
-										LocationCampus.this, Ob73.class);
-								startActivity(Orata2Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("OB 74")) {
-								Intent Orata2Go = new Intent(
-										LocationCampus.this, Ob74.class);
-								startActivity(Orata2Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("OB 75")) {
-								Intent Orata2Go = new Intent(
-										LocationCampus.this, Ob75.class);
-								startActivity(Orata2Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("OB 76")) {
-								Intent Orata2Go = new Intent(
-										LocationCampus.this, Ob76.class);
-								startActivity(Orata2Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("OB 77")) {
-								Intent Orata2Go = new Intent(
-										LocationCampus.this, Ob77.class);
-								startActivity(Orata2Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("OB 78")) {
-								Intent Orata2Go = new Intent(
-										LocationCampus.this, Ob78.class);
-								startActivity(Orata2Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("OB 79")) {
-								Intent Orata2Go = new Intent(
-										LocationCampus.this, Ob79.class);
-								startActivity(Orata2Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("OB 80")) {
-								Intent Orata2Go = new Intent(
-										LocationCampus.this, Ob80.class);
-								startActivity(Orata2Go);
-								// //////////////////////////////////////////////////////////////////
-							} else if (myAutoComplete.getText().toString()
-									.equals("ORATA 2 BUILDING")) {
-								Intent Orata2Go = new Intent(
-										LocationCampus.this,
-										Orata2Building.class);
-								startActivity(Orata2Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("OB2 80")) {
-								Intent Orata2Go = new Intent(
-										LocationCampus.this, Ob280.class);
-								startActivity(Orata2Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("OB2 81")) {
-								Intent Orata2Go = new Intent(
-										LocationCampus.this, Ob281.class);
-								startActivity(Orata2Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("OB2 82")) {
-								Intent Orata2Go = new Intent(
-										LocationCampus.this, Ob282.class);
-								startActivity(Orata2Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("OB2 83")) {
-								Intent Orata2Go = new Intent(
-										LocationCampus.this, Ob283.class);
-								startActivity(Orata2Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("OB2 L1")) {
-								Intent Orata2Go = new Intent(
-										LocationCampus.this, Ob2L1.class);
-								startActivity(Orata2Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("OB2 L2")) {
-								Intent Orata2Go = new Intent(
-										LocationCampus.this, Ob2L2.class);
-								startActivity(Orata2Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("OB2 84A")) {
-								Intent Orata2Go = new Intent(
-										LocationCampus.this, Ob284A.class);
-								startActivity(Orata2Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("OB2 84B")) {
-								Intent Orata2Go = new Intent(
-										LocationCampus.this, Ob284B.class);
-								startActivity(Orata2Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("OB2 85")) {
-								Intent Orata2Go = new Intent(
-										LocationCampus.this, Ob285.class);
-								startActivity(Orata2Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("OB2 86")) {
-								Intent Orata2Go = new Intent(
-										LocationCampus.this, Ob286.class);
-								startActivity(Orata2Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("OB2 87A")) {
-								Intent Orata2Go = new Intent(
-										LocationCampus.this, Ob287A.class);
-								startActivity(Orata2Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("OB2 87B")) {
-								Intent Orata2Go = new Intent(
-										LocationCampus.this, Ob287B.class);
-								startActivity(Orata2Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("OB2 L3")) {
-								Intent Orata2Go = new Intent(
-										LocationCampus.this, Ob2L3.class);
-								startActivity(Orata2Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("OB2 L4")) {
-								Intent Orata2Go = new Intent(
-										LocationCampus.this, Ob2L4.class);
-								startActivity(Orata2Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("OB2 88")) {
-								Intent Orata2Go = new Intent(
-										LocationCampus.this, Ob288.class);
-								startActivity(Orata2Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("OB2 89")) {
-								Intent Orata2Go = new Intent(
-										LocationCampus.this, Ob289.class);
-								startActivity(Orata2Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("OB2 90")) {
-								Intent Orata2Go = new Intent(
-										LocationCampus.this, Ob290.class);
-								startActivity(Orata2Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("OB2 91")) {
-								Intent Orata2Go = new Intent(
-										LocationCampus.this, Ob291.class);
-								startActivity(Orata2Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("OB2 92")) {
-								Intent Orata2Go = new Intent(
-										LocationCampus.this, Ob292.class);
-								startActivity(Orata2Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("OB2 93")) {
-								Intent Orata2Go = new Intent(
-										LocationCampus.this, Ob293.class);
-								startActivity(Orata2Go);
-								// /////////////////////////////////////////////////////////////////////
-							} else if (myAutoComplete.getText().toString()
-									.equals("AIRPLANE")) {
-								Intent Orata2Go = new Intent(
-										LocationCampus.this, Airplane.class);
-								startActivity(Orata2Go);
-								// ///////////////////////////////////////////////////////////////
-							} else if (myAutoComplete.getText().toString()
-									.equals("AVR/ AUDIO VISUAL ROOM")) {
-								Intent Room1Go = new Intent(
-										LocationCampus.this,
-										AudioVisualRoom.class);
-								startActivity(Room1Go);
-								// /////////////////////////////////////////////////////////
-							} else if (myAutoComplete.getText().toString()
-									.equals("25 CRIME LAB")) {
-								Intent Room1Go = new Intent(
-										LocationCampus.this, Room25.class);
-								startActivity(Room1Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("26 CRIME LAB")) {
-								Intent Room1Go = new Intent(
-										LocationCampus.this, Room26.class);
-								startActivity(Room1Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("27 CRIME LAB")) {
-								Intent Room1Go = new Intent(
-										LocationCampus.this, Room27.class);
-								startActivity(Room1Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("28 CRIME LAB")) {
-								Intent Room1Go = new Intent(
-										LocationCampus.this, Room28.class);
-								startActivity(Room1Go);
-								// ///////////////////////////////////////////////////////////////
-							} else if (myAutoComplete.getText().toString()
-									.equals("ENGINEERING LABORATORY")) {
-								Intent Room1Go = new Intent(
-										LocationCampus.this, EngLab.class);
-								startActivity(Room1Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("MP 81")) {
-								Intent Room1Go = new Intent(
-										LocationCampus.this,
-										MP81.class);
-								startActivity(Room1Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("MP 82")) {
-								Intent Room1Go = new Intent(
-										LocationCampus.this,
-										MP82.class);
-								startActivity(Room1Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("MP 83")) {
-								Intent Room1Go = new Intent(
-										LocationCampus.this,
-										MP83.class);
-								startActivity(Room1Go);
-							} else if (myAutoComplete.getText().toString()
-									.equals("ME LABORATORY")) {
-								Intent Room1Go = new Intent(
-										LocationCampus.this,
-										MELab.class);
-								startActivity(Room1Go);
-								// ////////////////////////////////////////////////////////////
-							} else if (myAutoComplete.getText().toString()
-									.equals("GYMNASIUM")) {
-								Intent Room1Go = new Intent(
-										LocationCampus.this, Gymnasium.class);
-								startActivity(Room1Go);
-							}
-						} else {
-							Toast.makeText(getApplicationContext(),
-									"NOT SAVED", Toast.LENGTH_LONG).show();
-						}
-					}
 					dbcon.close();
 				}
 			});
+
 			myAutoComplete.setOnItemClickListener(new OnItemClickListener() {
 				@Override
 				public void onItemClick(AdapterView<?> parent, View arg1,
@@ -935,7 +293,6 @@ public class LocationCampus extends Activity {
 		// AIRPLANE
 		databaseH.create(new MyObject("AIRPLANE"));
 
-
 		// CRIMINALISTIC
 		databaseH.create(new MyObject("25 CRIME LAB"));
 		databaseH.create(new MyObject("26 CRIME LAB"));
@@ -951,5 +308,1071 @@ public class LocationCampus extends Activity {
 
 		// GYMNASIUM
 		databaseH.create(new MyObject("GYMNASIUM"));
+	}
+
+	public void searchHonasanHallBuilding() {
+		Bitmap NB61bitmap = BitmapFactory.decodeResource(getResources(),
+				R.drawable.ic_launcher);
+
+		if (myAutoComplete.getText().toString().equals("HONNASAN HALL")) {
+			Intent intent = new Intent();
+			intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			intent.putExtra("Bitmap", NB61bitmap);
+			startActivity(intent);
+		}
+	}
+
+	public void searchAmadeoPerezBuilding() {
+		// Bitmap amadeobitmap = BitmapFactory.decodeResource(getResources(),
+		// R.drawable.room1);
+		Bitmap room1bitmap = BitmapFactory.decodeResource(getResources(),
+				R.drawable.room1);
+		Bitmap room2bitmap = BitmapFactory.decodeResource(getResources(),
+				R.drawable.room2);
+		Bitmap room3bitmap = BitmapFactory.decodeResource(getResources(),
+				R.drawable.room3);
+		Bitmap room4bitmap = BitmapFactory.decodeResource(getResources(),
+				R.drawable.room4);
+		Bitmap room5bitmap = BitmapFactory.decodeResource(getResources(),
+				R.drawable.room5);
+		Bitmap room6bitmap = BitmapFactory.decodeResource(getResources(),
+				R.drawable.room6);
+		Bitmap room8bitmap = BitmapFactory.decodeResource(getResources(),
+				R.drawable.room8);
+
+		if (myAutoComplete.getText().toString().equals("AMADEO PEREZ BUILDING")) {
+			// Intent intent = new Intent();
+			// intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			// intent.putExtra("Bitmap", amadeobitmap);
+			// startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		} else if (myAutoComplete.getText().toString().equals("ROOM 1")) {
+			Intent intent = new Intent();
+			intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			intent.putExtra("Bitmap", room1bitmap);
+			startActivity(intent);
+
+		} else if (myAutoComplete.getText().toString().equals("ROOM 2")) {
+			Intent intent = new Intent();
+			intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			intent.putExtra("Bitmap", room2bitmap);
+			startActivity(intent);
+
+		} else if (myAutoComplete.getText().toString().equals("ROOM 3")) {
+			Intent intent = new Intent();
+			intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			intent.putExtra("Bitmap", room3bitmap);
+			startActivity(intent);
+
+		} else if (myAutoComplete.getText().toString().equals("ROOM 4")) {
+			Intent intent = new Intent();
+			intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			intent.putExtra("Bitmap", room4bitmap);
+			startActivity(intent);
+
+		} else if (myAutoComplete.getText().toString().equals("ROOM 5")) {
+			Intent intent = new Intent();
+			intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			intent.putExtra("Bitmap", room5bitmap);
+			startActivity(intent);
+
+		} else if (myAutoComplete.getText().toString().equals("ROOM 6")) {
+			Intent intent = new Intent();
+			intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			intent.putExtra("Bitmap", room6bitmap);
+			startActivity(intent);
+
+		} else if (myAutoComplete.getText().toString().equals("ROOM 8")) {
+			Intent intent = new Intent();
+			intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			intent.putExtra("Bitmap", room8bitmap);
+			startActivity(intent);
+		}
+	}
+
+	public void searchArtsAndScienceBuilding2() {
+		Bitmap room9bitmap = BitmapFactory.decodeResource(getResources(),
+				R.drawable.room9);
+		Bitmap room10bitmap = BitmapFactory.decodeResource(getResources(),
+				R.drawable.room10);
+		Bitmap room11bitmap = BitmapFactory.decodeResource(getResources(),
+				R.drawable.room11);
+		// Bitmap room12bitmap = BitmapFactory.decodeResource(getResources(),
+		// R.drawable.room8);//wala pa image
+		// Bitmap room13bitmap = BitmapFactory.decodeResource(getResources(),
+		// R.drawable.room8);//wala pa image
+		// Bitmap room14bitmap = BitmapFactory.decodeResource(getResources(),
+		// R.drawable.room8);//wala pa image
+		// Bitmap room15bitmap = BitmapFactory.decodeResource(getResources(),
+		// R.drawable.room8);//wala pa image
+		// Bitmap room16bitmap = BitmapFactory.decodeResource(getResources(),
+		// R.drawable.room8);//wala pa image
+		Bitmap nstpbitmap = BitmapFactory.decodeResource(getResources(),
+				R.drawable.nstp);
+
+		if (myAutoComplete.getText().toString()
+				.equals("ARTS AND SCIENCES BUILDING 2")) {
+			Intent intent = new Intent();
+			intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			intent.putExtra("Bitmap", room9bitmap);
+			startActivity(intent);
+
+		} else if (myAutoComplete.getText().toString().equals("ROOM 9")) {
+			Intent intent = new Intent();
+			intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			intent.putExtra("Bitmap", room9bitmap);
+			startActivity(intent);
+
+		} else if (myAutoComplete.getText().toString().equals("ROOM 10")) {
+			Intent intent = new Intent();
+			intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			intent.putExtra("Bitmap", room10bitmap);
+			startActivity(intent);
+
+		} else if (myAutoComplete.getText().toString().equals("ROOM 11")) {
+			Intent intent = new Intent();
+			intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			intent.putExtra("Bitmap", room11bitmap);
+			startActivity(intent);
+
+		} else if (myAutoComplete.getText().toString().equals("ROOM 12")) {
+			// Intent intent = new Intent();
+			// intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			// intent.putExtra("Bitmap", room12bitmap);
+			// startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+
+		} else if (myAutoComplete.getText().toString().equals("ROOM 13")) {
+			// Intent intent = new Intent();
+			// intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			// intent.putExtra("Bitmap", room13bitmap);
+			// startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		} else if (myAutoComplete.getText().toString().equals("ROOM 14")) {
+			// Intent intent = new Intent();
+			// intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			// intent.putExtra("Bitmap", room14bitmap);
+			// startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		} else if (myAutoComplete.getText().toString().equals("ROOM 15")) {
+			// Intent intent = new Intent();
+			// intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			// intent.putExtra("Bitmap", room15bitmap);
+			// startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		} else if (myAutoComplete.getText().toString().equals("ROOM 16")) {
+			// Intent intent = new Intent();
+			// intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			// intent.putExtra("Bitmap", room16bitmap);
+			// startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		} else if (myAutoComplete.getText().toString().equals("NSTP ROOM")) {
+			Intent intent = new Intent();
+			intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			intent.putExtra("Bitmap", nstpbitmap);
+			startActivity(intent);
+		}
+	}
+
+	public void searchAccountancyBuilding() {
+		// Bitmap accountancybitmap =
+		// BitmapFactory.decodeResource(getResources(),
+		// R.drawable.ic_launcher);
+		// Bitmap A17bitmap = BitmapFactory.decodeResource(getResources(),
+		// R.drawable.ic_launcher);
+		// Bitmap A18bitmap = BitmapFactory.decodeResource(getResources(),
+		// R.drawable.ic_launcher);
+		// Bitmap A19bitmap = BitmapFactory.decodeResource(getResources(),
+		// R.drawable.ic_launcher);
+		// Bitmap A20bitmap = BitmapFactory.decodeResource(getResources(),
+		// R.drawable.ic_launcher);
+
+		if (myAutoComplete.getText().toString().equals("ACCOUNTANCY BUILDING")) {
+			// Intent intent = new Intent();
+			// intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			// intent.putExtra("Bitmap", accountancybitmap);
+			// startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		} else if (myAutoComplete.getText().toString().equals("A17")) {
+			// Intent intent = new Intent();
+			// intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			// intent.putExtra("Bitmap", A17bitmap);
+			// startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		} else if (myAutoComplete.getText().toString().equals("A18")) {
+			// Intent intent = new Intent();
+			// intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			// intent.putExtra("Bitmap", A18bitmap);
+			// startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		} else if (myAutoComplete.getText().toString().equals("A19")) {
+			// Intent intent = new Intent();
+			// intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			// intent.putExtra("Bitmap", A19bitmap);
+			// startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		} else if (myAutoComplete.getText().toString().equals("A20")) {
+			// Intent intent = new Intent();
+			// intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			// intent.putExtra("Bitmap", A20bitmap);
+			// startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		}
+	}
+
+	public void searchBadarBuilding() {
+		// Bitmap badarbitmap = BitmapFactory.decodeResource(getResources(),
+		// R.drawable.ic_launcher);
+		// Bitmap B21bitmap = BitmapFactory.decodeResource(getResources(),
+		// R.drawable.ic_launcher);
+		// Bitmap B22bitmap = BitmapFactory.decodeResource(getResources(),
+		// R.drawable.ic_launcher);
+		// Bitmap B23bitmap = BitmapFactory.decodeResource(getResources(),
+		// R.drawable.ic_launcher);
+		// Bitmap B24bitmap = BitmapFactory.decodeResource(getResources(),
+		// R.drawable.ic_launcher);
+		if (myAutoComplete.getText().toString().equals("BADAR BUILDING")) {
+			// Intent intent = new Intent();
+			// intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			// intent.putExtra("Bitmap", badarbitmap);
+			// startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		} else if (myAutoComplete.getText().toString().equals("B21")) {
+			// Intent intent = new Intent();
+			// intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			// intent.putExtra("Bitmap", B21bitmap);
+			// startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		} else if (myAutoComplete.getText().toString().equals("B22")) {
+			// Intent intent = new Intent();
+			// intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			// intent.putExtra("Bitmap", B22bitmap);
+			// startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		} else if (myAutoComplete.getText().toString().equals("B23")) {
+			// Intent intent = new Intent();
+			// intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			// intent.putExtra("Bitmap", B23bitmap);
+			// startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		} else if (myAutoComplete.getText().toString().equals("B24")) {
+			// Intent intent = new Intent();
+			// intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			// intent.putExtra("Bitmap", B24bitmap);
+			// startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		}
+	}
+
+	public void searchArtsAndScienceBuilding() {
+		// Bitmap artsbitmap = BitmapFactory.decodeResource(getResources(),
+		// R.drawable.ic_launcher);
+		Bitmap room29bitmap = BitmapFactory.decodeResource(getResources(),
+				R.drawable.room29);
+		Bitmap room30bitmap = BitmapFactory.decodeResource(getResources(),
+				R.drawable.typingroom);
+		Bitmap room31bitmap = BitmapFactory.decodeResource(getResources(),
+				R.drawable.room31);
+		Bitmap bakingbitmap = BitmapFactory.decodeResource(getResources(),
+				R.drawable.baking);
+		Bitmap commercialbitmap = BitmapFactory.decodeResource(getResources(),
+				R.drawable.commercial);
+		// Bitmap room34bitmap = BitmapFactory.decodeResource(getResources(),
+		// R.drawable.room34);
+		// Bitmap room35bitmap = BitmapFactory.decodeResource(getResources(),
+		// R.drawable.room35);
+		// Bitmap room36bitmap = BitmapFactory.decodeResource(getResources(),
+		// R.drawable.room36);
+		// Bitmap room37bitmap = BitmapFactory.decodeResource(getResources(),
+		// R.drawable.room37);
+		// Bitmap room38bitmap = BitmapFactory.decodeResource(getResources(),
+		// R.drawable.room38);
+
+		if (myAutoComplete.getText().toString()
+				.equals("ARTS AND SCIENCES BUILDING")) {
+			// Intent intent = new Intent();
+			// intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			// intent.putExtra("Bitmap", artsbitmap);
+			// startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+
+		} else if (myAutoComplete.getText().toString().equals("29")) {
+			Intent intent = new Intent();
+			intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			intent.putExtra("Bitmap", room29bitmap);
+			startActivity(intent);
+
+		} else if (myAutoComplete.getText().toString()
+				.equals("30 TYPING LABORATORY")) {
+			Intent intent = new Intent();
+			intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			intent.putExtra("Bitmap", room30bitmap);
+			startActivity(intent);
+
+		} else if (myAutoComplete.getText().toString().equals("31")) {
+			Intent intent = new Intent();
+			intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			intent.putExtra("Bitmap", room31bitmap);
+			startActivity(intent);
+
+		} else if (myAutoComplete.getText().toString()
+				.equals("32 BAKING LABORATORY")) {
+			Intent intent = new Intent();
+			intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			intent.putExtra("Bitmap", bakingbitmap);
+			startActivity(intent);
+
+		} else if (myAutoComplete.getText().toString().equals("33CCLab2")) {
+			Intent intent = new Intent();
+			intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			intent.putExtra("Bitmap", commercialbitmap);
+			startActivity(intent);
+
+		} else if (myAutoComplete.getText().toString().equals("34")) {
+			// Intent intent = new Intent();
+			// intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			// intent.putExtra("Bitmap", room34bitmap);
+			// startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+
+		} else if (myAutoComplete.getText().toString().equals("35")) {
+			// Intent intent = new Intent();
+			// intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			// intent.putExtra("Bitmap", room35bitmap);
+			// startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		} else if (myAutoComplete.getText().toString().equals("36CGLab")) {
+			// Intent intent = new Intent();
+			// intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			// intent.putExtra("Bitmap", room36bitmap);
+			// startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		} else if (myAutoComplete.getText().toString().equals("37FBSLab")) {
+			// Intent intent = new Intent();
+			// intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			// intent.putExtra("Bitmap", room37bitmap);
+			// startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		} else if (myAutoComplete.getText().toString().equals("38CCLab")) {
+			// Intent intent = new Intent();
+			// intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			// intent.putExtra("Bitmap", room38bitmap);
+			// startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		}
+	}
+
+	public void searchScienceBuilding() {
+	//	Bitmap NB61bitmap = BitmapFactory.decodeResource(getResources(),
+			//	R.drawable.ic_launcher);
+
+		if (myAutoComplete.getText().toString().equals("SCIENCE BUILDING")) {
+		//	Intent intent = new Intent();
+		//	intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+		//	intent.putExtra("Bitmap", NB61bitmap);
+		//	startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		} else if (myAutoComplete.getText().toString().equals("39 SL4")) {
+		//	Intent intent = new Intent();
+			//intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			//intent.putExtra("Bitmap", NB61bitmap);
+			//startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		} else if (myAutoComplete.getText().toString().equals("40 SL5")) {
+			//Intent intent = new Intent();
+			//intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			//intent.putExtra("Bitmap", NB61bitmap);
+			//startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		} else if (myAutoComplete.getText().toString()
+				.equals("41 CLINICAL SKILLS LAB")) {
+			//Intent intent = new Intent();
+			//intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			//intent.putExtra("Bitmap", NB61bitmap);
+			//startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		} else if (myAutoComplete.getText().toString()
+				.equals("42 CLINICAL SKILLS LAB")) {
+			//Intent intent = new Intent();
+			//intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			//intent.putExtra("Bitmap", NB61bitmap);
+			//startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		} else if (myAutoComplete.getText().toString()
+				.equals("43 CLINICAL SKILLS LAB")) {
+			//Intent intent = new Intent();
+			//intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			//intent.putExtra("Bitmap", NB61bitmap);
+			//startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		}
+	}
+
+	public void searchRooms44_45() {
+	//	Bitmap NB61bitmap = BitmapFactory.decodeResource(getResources(),
+			//	R.drawable.ic_launcher);
+
+		if (myAutoComplete.getText().toString().equals("44")) {
+			//Intent intent = new Intent();
+			//intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			//intent.putExtra("Bitmap", NB61bitmap);
+			//startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		} else if (myAutoComplete.getText().toString().equals("45")) {
+			//Intent intent = new Intent();
+			//intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			//intent.putExtra("Bitmap", NB61bitmap);
+			//startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		}
+	}
+
+	public void searchDevRead() {
+	//	Bitmap NB61bitmap = BitmapFactory.decodeResource(getResources(),
+			//	R.drawable.ic_launcher);
+		if (myAutoComplete.getText().toString().equals("DEVELOPMENT CENTER")) {
+		//	Intent intent = new Intent();
+			//intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			//intent.putExtra("Bitmap", NB61bitmap);
+			//startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		} else if (myAutoComplete.getText().toString().equals("READING CENTER")) {
+			//Intent intent = new Intent();
+			//intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			//intent.putExtra("Bitmap", NB61bitmap);
+			//startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		}
+	}
+
+	public void searchFourRoomsBuilding() {
+		Bitmap room48bitmap = BitmapFactory.decodeResource(getResources(),
+				R.drawable.room48);
+		Bitmap room47abitmap = BitmapFactory.decodeResource(getResources(),
+				R.drawable.room47a);
+		Bitmap room47bbitmap = BitmapFactory.decodeResource(getResources(),
+				R.drawable.room47b);
+		Bitmap socialbitmap = BitmapFactory.decodeResource(getResources(),
+				R.drawable.socialworks);
+
+		if (myAutoComplete.getText().toString().equals("FOUR ROOMS BUILDING")) {
+		//	Intent intent = new Intent();
+		//	intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			//intent.putExtra("Bitmap", NB61bitmap);
+			//startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		} else if (myAutoComplete.getText().toString().equals("ROOM 48")) {
+			Intent intent = new Intent();
+			intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			intent.putExtra("Bitmap", room48bitmap);
+			startActivity(intent);
+
+		} else if (myAutoComplete.getText().toString().equals("ROOM 49")) {
+			//Intent intent = new Intent();
+			//intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+		//	intent.putExtra("Bitmap", NB61bitmap);
+			//startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		} else if (myAutoComplete.getText().toString().equals("ROOM 50")) {
+			//Intent intent = new Intent();
+			//intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			//intent.putExtra("Bitmap", NB61bitmap);
+			//startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		} else if (myAutoComplete.getText().toString().equals("ROOM 51")) {
+			//Intent intent = new Intent();
+			//intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			//intent.putExtra("Bitmap", NB61bitmap);
+			//startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		} else if (myAutoComplete.getText().toString().equals("ROOM 47B")) {
+			Intent intent = new Intent();
+			intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			intent.putExtra("Bitmap", room47bbitmap);
+			startActivity(intent);
+
+		} else if (myAutoComplete.getText().toString().equals("ROOM 47A")) {
+			Intent intent = new Intent();
+			intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			intent.putExtra("Bitmap", room47abitmap);
+			startActivity(intent);
+
+		} else if (myAutoComplete.getText().toString().equals("46 SOCIAL WORK")) {
+			Intent intent = new Intent();
+			intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			intent.putExtra("Bitmap", socialbitmap);
+			startActivity(intent);
+		}
+	}
+
+	public void searchNewBuilding() {
+		//Bitmap newbitmap = BitmapFactory.decodeResource(getResources(),
+		//		R.drawable.ic_launcher);
+		Bitmap chemicalbitmap = BitmapFactory.decodeResource(getResources(),
+				R.drawable.chemicallab);
+
+		if (myAutoComplete.getText().toString().equals("NEW BUILDING")) {
+		//	Intent intent = new Intent();
+		//	intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			//intent.putExtra("Bitmap", NB61bitmap);
+			//startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		} else if (myAutoComplete.getText().toString()
+				.equals("CHEMICAL LABORATORY")) {
+			Intent intent = new Intent();
+			intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			intent.putExtra("Bitmap", chemicalbitmap);
+			startActivity(intent);
+
+		} else if (myAutoComplete.getText().toString().equals("NB52")) {
+		//	Intent intent = new Intent();
+			//intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			//intent.putExtra("Bitmap", NB61bitmap);
+			//startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		} else if (myAutoComplete.getText().toString().equals("NB53 BioLab")) {
+			//Intent intent = new Intent();
+			//intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+		//	intent.putExtra("Bitmap", NB61bitmap);
+			//startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		} else if (myAutoComplete.getText().toString().equals("NB54 CHLab")) {
+			//Intent intent = new Intent();
+			//intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			//intent.putExtra("Bitmap", NB61bitmap);
+			//startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		} else if (myAutoComplete.getText().toString().equals("NB55 PHLab")) {
+			//Intent intent = new Intent();
+			//intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			//intent.putExtra("Bitmap", NB61bitmap);
+			//startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		} else if (myAutoComplete.getText().toString().equals("NB56")) {
+			//Intent intent = new Intent();
+			//intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			//intent.putExtra("Bitmap", NB61bitmap);
+			//startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		} else if (myAutoComplete.getText().toString().equals("NB57")) {
+		//	Intent intent = new Intent();
+		//	intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			//intent.putExtra("Bitmap", NB61bitmap);
+		//	startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		} else if (myAutoComplete.getText().toString().equals("NB58")) {
+			//Intent intent = new Intent();
+			//intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			//intent.putExtra("Bitmap", NB61bitmap);
+			//startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		} else if (myAutoComplete.getText().toString().equals("NB59")) {
+			//Intent intent = new Intent();
+			//intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			//intent.putExtra("Bitmap", NB61bitmap);
+			//startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		} else if (myAutoComplete.getText().toString().equals("NB60")) {
+			//Intent intent = new Intent();
+			//intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			//intent.putExtra("Bitmap", NB61bitmap);
+		//	startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		} else if (myAutoComplete.getText().toString().equals("NB61 COMPLAB")) {
+		//	Intent intent = new Intent();
+			//intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			//intent.putExtra("Bitmap", NB61bitmap);
+			//startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		} else if (myAutoComplete.getText().toString().equals("NB62 COMPLAB")) {
+			//Intent intent = new Intent();
+			//intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			//intent.putExtra("Bitmap", NB61bitmap);
+			//startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		} else if (myAutoComplete.getText().toString().equals("NB63 COMPLAB")) {
+			//Intent intent = new Intent();
+		//	intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			//intent.putExtra("Bitmap", NB61bitmap);
+			//startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		} else if (myAutoComplete.getText().toString().equals("NB64 COMPLAB")) {
+			//Intent intent = new Intent();
+			//intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			//intent.putExtra("Bitmap", NB61bitmap);
+			//startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		} else if (myAutoComplete.getText().toString().equals("NB65 COMPLAB")) {
+			//Intent intent = new Intent();
+			//intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			//intent.putExtra("Bitmap", NB61bitmap);
+			//startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		} else if (myAutoComplete.getText().toString().equals("NB66")) {
+		//	Intent intent = new Intent();
+			//intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			//intent.putExtra("Bitmap", NB61bitmap);
+			//startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		} else if (myAutoComplete.getText().toString().equals("NB67")) {
+			//Intent intent = new Intent();
+			//intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			//intent.putExtra("Bitmap", NB61bitmap);
+			//startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		} else if (myAutoComplete.getText().toString().equals("NB68")) {
+			//Intent intent = new Intent();
+			//intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			//intent.putExtra("Bitmap", NB61bitmap);
+			//startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		} else if (myAutoComplete.getText().toString().equals("NB69")) {
+			//Intent intent = new Intent();
+			//intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			//intent.putExtra("Bitmap", NB61bitmap);
+			//startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		} else if (myAutoComplete.getText().toString().equals("NB70")) {
+			//Intent intent = new Intent();
+			//intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			//intent.putExtra("Bitmap", NB61bitmap);
+			//startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		}
+	}
+
+	public void searchGreenHome() {
+		Bitmap greenbitmap = BitmapFactory.decodeResource(getResources(),
+				R.drawable.greenhome);
+		Bitmap green1bitmap = BitmapFactory.decodeResource(getResources(),
+				R.drawable.greenhome2);
+
+		if (myAutoComplete.getText().toString().equals("GREENHOME")) {
+			Intent intent = new Intent();
+			intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			intent.putExtra("Bitmap", greenbitmap);
+			startActivity(intent);
+
+		} else if (myAutoComplete.getText().toString().equals("GREENHOME 2")) {
+			Intent intent = new Intent();
+			intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			intent.putExtra("Bitmap", green1bitmap);
+			startActivity(intent);
+		}
+	}
+
+	public void searchOrataBuilding() {
+		//Bitmap NB61bitmap = BitmapFactory.decodeResource(getResources(),
+				//R.drawable.ic_launcher);
+
+		if (myAutoComplete.getText().toString().equals("ORATA BUILDING")) {
+			//Intent intent = new Intent();
+			//intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			//intent.putExtra("Bitmap", NB61bitmap);
+			//startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		} else if (myAutoComplete.getText().toString().equals("OB 71")) {
+			//Intent intent = new Intent();
+			//intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			//intent.putExtra("Bitmap", NB61bitmap);
+			//startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		} else if (myAutoComplete.getText().toString().equals("OB 72")) {
+			//Intent intent = new Intent();
+			//intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+		//	intent.putExtra("Bitmap", NB61bitmap);
+			//startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		} else if (myAutoComplete.getText().toString().equals("OB 73")) {
+			//Intent intent = new Intent();
+			//intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			//intent.putExtra("Bitmap", NB61bitmap);
+			//startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		} else if (myAutoComplete.getText().toString().equals("OB 74")) {
+			//Intent intent = new Intent();
+		//	intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			//intent.putExtra("Bitmap", NB61bitmap);
+			//startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		} else if (myAutoComplete.getText().toString().equals("OB 75")) {
+			//Intent intent = new Intent();
+			//intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			//intent.putExtra("Bitmap", NB61bitmap);
+			//startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		} else if (myAutoComplete.getText().toString().equals("OB 76")) {
+			//Intent intent = new Intent();
+		//	intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			//intent.putExtra("Bitmap", NB61bitmap);
+			//startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		} else if (myAutoComplete.getText().toString().equals("OB 77")) {
+			//Intent intent = new Intent();
+			//intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			//intent.putExtra("Bitmap", NB61bitmap);
+			//startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		} else if (myAutoComplete.getText().toString().equals("OB 78")) {
+			//Intent intent = new Intent();
+			//intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			//intent.putExtra("Bitmap", NB61bitmap);
+			//startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		} else if (myAutoComplete.getText().toString().equals("OB 79")) {
+			//Intent intent = new Intent();
+			//intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			//intent.putExtra("Bitmap", NB61bitmap);
+		//	startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		} else if (myAutoComplete.getText().toString().equals("OB 80")) {
+		//	Intent intent = new Intent();
+		//	intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+		//	intent.putExtra("Bitmap", NB61bitmap);
+		//	startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		}
+	}
+
+	public void searchOrata2Building() {
+		//Bitmap NB61bitmap = BitmapFactory.decodeResource(getResources(),
+				//R.drawable.ic_launcher);
+
+		if (myAutoComplete.getText().toString().equals("ORATA 2 BUILDING")) {
+			//Intent intent = new Intent();
+		//	intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			//intent.putExtra("Bitmap", NB61bitmap);
+			//startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		} else if (myAutoComplete.getText().toString().equals("OB2 80")) {
+		//	Intent intent = new Intent();
+			//intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			//intent.putExtra("Bitmap", NB61bitmap);
+			//startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		} else if (myAutoComplete.getText().toString().equals("OB2 81")) {
+			//Intent intent = new Intent();
+			//intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			//intent.putExtra("Bitmap", NB61bitmap);
+			//startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		} else if (myAutoComplete.getText().toString().equals("OB2 82")) {
+		//	Intent intent = new Intent();
+		//	intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			//intent.putExtra("Bitmap", NB61bitmap);
+			//startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		} else if (myAutoComplete.getText().toString().equals("OB2 83")) {
+			//Intent intent = new Intent();
+			//intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			///intent.putExtra("Bitmap", NB61bitmap);
+			//startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		} else if (myAutoComplete.getText().toString().equals("OB2 L1")) {
+			//Intent intent = new Intent();
+			//intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			//intent.putExtra("Bitmap", NB61bitmap);
+			//startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		} else if (myAutoComplete.getText().toString().equals("OB2 L2")) {
+			//Intent intent = new Intent();
+			//intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			//intent.putExtra("Bitmap", NB61bitmap);
+			//startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		} else if (myAutoComplete.getText().toString().equals("OB2 84A")) {
+			//Intent intent = new Intent();
+			//intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			//intent.putExtra("Bitmap", NB61bitmap);
+			//startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		} else if (myAutoComplete.getText().toString().equals("OB2 84B")) {
+			//Intent intent = new Intent();
+			//intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			//intent.putExtra("Bitmap", NB61bitmap);
+			//startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		} else if (myAutoComplete.getText().toString().equals("OB2 85")) {
+			//Intent intent = new Intent();
+			//intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			//intent.putExtra("Bitmap", NB61bitmap);
+			//startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		} else if (myAutoComplete.getText().toString().equals("OB2 86")) {
+			//Intent intent = new Intent();
+			//intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			//intent.putExtra("Bitmap", NB61bitmap);
+			//startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		} else if (myAutoComplete.getText().toString().equals("OB2 87A")) {
+			//Intent intent = new Intent();
+			//intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			//intent.putExtra("Bitmap", NB61bitmap);
+			//startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		} else if (myAutoComplete.getText().toString().equals("OB2 87B")) {
+			//Intent intent = new Intent();
+			//intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			//intent.putExtra("Bitmap", NB61bitmap);
+			//startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		} else if (myAutoComplete.getText().toString().equals("OB2 L3")) {
+			///Intent intent = new Intent();
+			//intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			//intent.putExtra("Bitmap", NB61bitmap);
+			//startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		} else if (myAutoComplete.getText().toString().equals("OB2 L4")) {
+		//	Intent intent = new Intent();
+		//	intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			//intent.putExtra("Bitmap", NB61bitmap);
+			//startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		} else if (myAutoComplete.getText().toString().equals("OB2 88")) {
+			//Intent intent = new Intent();
+			//intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			//intent.putExtra("Bitmap", NB61bitmap);
+			//startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		} else if (myAutoComplete.getText().toString().equals("OB2 89")) {
+			//Intent intent = new Intent();
+			//intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			//intent.putExtra("Bitmap", NB61bitmap);
+			//startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		} else if (myAutoComplete.getText().toString().equals("OB2 90")) {
+			//Intent intent = new Intent();
+			//intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			//intent.putExtra("Bitmap", NB61bitmap);
+			//startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		} else if (myAutoComplete.getText().toString().equals("OB2 91")) {
+			//Intent intent = new Intent();
+			//intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			//intent.putExtra("Bitmap", NB61bitmap);
+			//startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		} else if (myAutoComplete.getText().toString().equals("OB2 92")) {
+			//Intent intent = new Intent();
+			//intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			//intent.putExtra("Bitmap", NB61bitmap);
+			//startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		} else if (myAutoComplete.getText().toString().equals("OB2 93")) {
+			//Intent intent = new Intent();
+			//intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			//intent.putExtra("Bitmap", NB61bitmap);
+			//startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		}
+	}
+
+	public void searchAirplane() {
+		//Bitmap NB61bitmap = BitmapFactory.decodeResource(getResources(),
+			//	R.drawable.ic_launcher);
+
+		if (myAutoComplete.getText().toString().equals("AIRPLANE")) {
+			//Intent intent = new Intent();
+			//intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			//intent.putExtra("Bitmap", NB61bitmap);
+			//startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		}
+	}
+
+	public void searchAVR() {
+		//Bitmap NB61bitmap = BitmapFactory.decodeResource(getResources(),
+			//	R.drawable.ic_launcher);
+
+		if (myAutoComplete.getText().toString()
+				.equals("AVR/ AUDIO VISUAL ROOM")) {
+			//Intent intent = new Intent();
+			//intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			//intent.putExtra("Bitmap", NB61bitmap);
+			//startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		}
+	}
+
+	public void searchCrime() {
+
+		Bitmap room25bitmap = BitmapFactory.decodeResource(getResources(),
+				R.drawable.room25);
+		Bitmap room26bitmap = BitmapFactory.decodeResource(getResources(),
+				R.drawable.room26);
+		Bitmap room27bitmap = BitmapFactory.decodeResource(getResources(),
+				R.drawable.room27);
+		Bitmap room28bitmap = BitmapFactory.decodeResource(getResources(),
+				R.drawable.room28);
+
+		if (myAutoComplete.getText().toString().equals("25 CRIME LAB")) {
+			Intent intent = new Intent();
+			intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			intent.putExtra("Bitmap", room25bitmap);
+			startActivity(intent);
+
+		} else if (myAutoComplete.getText().toString().equals("26 CRIME LAB")) {
+			Intent intent = new Intent();
+			intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			intent.putExtra("Bitmap", room26bitmap);
+			startActivity(intent);
+
+		} else if (myAutoComplete.getText().toString().equals("27 CRIME LAB")) {
+			Intent intent = new Intent();
+			intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			intent.putExtra("Bitmap", room27bitmap);
+			startActivity(intent);
+
+		} else if (myAutoComplete.getText().toString().equals("28 CRIME LAB")) {
+			Intent intent = new Intent();
+			intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			intent.putExtra("Bitmap", room28bitmap);
+			startActivity(intent);
+
+		}
+	}
+
+	public void searchEngineeringLab() {
+		Bitmap engibitmap = BitmapFactory.decodeResource(getResources(),
+			R.drawable.engineerlab);
+
+		if (myAutoComplete.getText().toString()
+				.equals("ENGINEERING LABORATORY")) {
+			Intent intent = new Intent();
+			intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			intent.putExtra("Bitmap", engibitmap);
+			startActivity(intent);
+
+		} else if (myAutoComplete.getText().toString().equals("MP 81")) {
+			//Intent intent = new Intent();
+			//intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			//intent.putExtra("Bitmap", NB61bitmap);
+			//startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		} else if (myAutoComplete.getText().toString().equals("MP 82")) {
+			//Intent intent = new Intent();
+			//intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			//intent.putExtra("Bitmap", NB61bitmap);
+			//startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		} else if (myAutoComplete.getText().toString().equals("MP 83")) {
+			//Intent intent = new Intent();
+			//intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+		//	intent.putExtra("Bitmap", NB61bitmap);
+			//startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		} else if (myAutoComplete.getText().toString().equals("ME LABORATORY")) {
+		//	Intent intent = new Intent();
+		//	intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+		//	intent.putExtra("Bitmap", NB61bitmap);
+		//	startActivity(intent);
+			Toast.makeText(getApplicationContext(), "no location yet",
+					Toast.LENGTH_LONG).show();
+		}
+	}
+
+	public void searchGym() {
+		//Bitmap engibitmap = BitmapFactory.decodeResource(getResources(),
+			//	R.drawable.engineerlab);
+
+		if (myAutoComplete.getText().toString().equals("GYMNASIUM")) {
+		//	Intent intent = new Intent();
+			//intent.setClass(LocationCampus.this, ImageViewingLocation.class);
+			//intent.putExtra("Bitmap", engibitmap);
+			//startActivity(intent);
+		}
 	}
 }
