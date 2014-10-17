@@ -10,13 +10,13 @@ public class ImageViewingLocation extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		 Bitmap bitmap = (Bitmap)this.getIntent().getParcelableExtra("Bitmap");
+		 Bitmap room1bitmap = (Bitmap)this.getIntent().getParcelableExtra("Bitmap");
 		  
 
 			setContentView(R.layout.image_viewing_location);
 		  ImageView viewBitmap = (ImageView)findViewById(R.id.bitmapview);
 		  
-		  viewBitmap.setImageBitmap(bitmap);
+		  viewBitmap.setImageBitmap(room1bitmap);
 		  
 		 }
 }

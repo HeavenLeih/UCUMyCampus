@@ -69,11 +69,11 @@ public class AutocompleteCustomArrayAdapterD extends ArrayAdapter<MyObjectD> {
 			textViewItemD1.setText(objectItemD.objectNameD);
 			
 			// in case you want to add some style, you can do something like:
-			textViewItemD.setBackgroundColor(Color.BLUE);
-			textViewItemD.setTextColor(Color.WHITE);
+			textViewItemD.setBackgroundColor(Color.WHITE);
+		
 			
-			textViewItemD1.setBackgroundColor(Color.BLUE);
-			textViewItemD1.setTextColor(Color.WHITE);
+			textViewItemD1.setBackgroundColor(Color.WHITE);
+		
 
 			// #3C88FA
 
