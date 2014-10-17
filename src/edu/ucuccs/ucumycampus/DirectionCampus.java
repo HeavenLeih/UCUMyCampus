@@ -649,78 +649,140 @@ public class DirectionCampus extends Activity {
 	}
 
 	public void searchHonnasanHallToBuilding() {
-
+		Bitmap honasantooratabitmap = BitmapFactory.decodeResource(getResources(),
+				R.drawable.b2bonatoorata);
+		Bitmap honasantoorata2bitmap = BitmapFactory.decodeResource(getResources(),
+						R.drawable.b2bhonatoorat2);
+		Bitmap honasantonbbitmap = BitmapFactory.decodeResource(getResources(),
+				R.drawable.b2bhonatonb);
+		Bitmap honasantogymbitmap = BitmapFactory.decodeResource(getResources(),
+				R.drawable.b2bhonatogym);
+		Bitmap honasantobadarbitmap = BitmapFactory.decodeResource(getResources(),
+				R.drawable.b2bhonatobadar);
+		Bitmap honasantoairbitmap = BitmapFactory.decodeResource(getResources(),
+				R.drawable.b2bhonatoair);
+		Bitmap honasantogreenbitmap = BitmapFactory.decodeResource(getResources(),
+				R.drawable.b2bhonatogreen);
+		Bitmap honasantoamabitmap = BitmapFactory.decodeResource(getResources(),
+				R.drawable.b2bhonatoapb);	
+		Bitmap honasantoavrbitmap = BitmapFactory.decodeResource(getResources(),
+				R.drawable.b2bhonatoavr);
+		Bitmap honasantoarts2bitmap = BitmapFactory.decodeResource(getResources(),
+				R.drawable.b2bhonatoarts2);
+		Bitmap honasantoactbitmap = BitmapFactory.decodeResource(getResources(),
+				R.drawable.b2bhonatoact);
+		Bitmap honasantoartsbitmap = BitmapFactory.decodeResource(getResources(),
+				R.drawable.b2bhonatoarts);
+		Bitmap honasantoscbitmap = BitmapFactory.decodeResource(getResources(),
+				R.drawable.b2bhonatoscience);
+		Bitmap honasantoredbitmap = BitmapFactory.decodeResource(getResources(),
+				R.drawable.b2bhonatored);
+		
+		Bitmap honasantofourbitmap = BitmapFactory.decodeResource(getResources(),
+				R.drawable.b2bhonatofour);
+		Bitmap honasantogreen2bitmap = BitmapFactory.decodeResource(getResources(),
+				R.drawable.b2bhonatogreen2);
+		Bitmap honasantoengbitmap = BitmapFactory.decodeResource(getResources(),
+				R.drawable.b2bhonatoneng);
 		if (((myAutoCompleteLoc.getText().toString().equals("HONNASAN HALL")) && (myAutoCompleteDir
 				.getText().toString().equals("ORATA BUILDING")))
 				|| ((myAutoCompleteDir.getText().toString()
 						.equals("HONNASAN HALL")) && (myAutoCompleteLoc
 						.getText().toString().equals("ORATA BUILDING")))) {
-			Toast.makeText(getApplicationContext(), "no direction yet",
-					Toast.LENGTH_LONG).show();
+			Intent intent = new Intent();
+			intent.setClass(DirectionCampus.this, ImageViewingDirection.class);
+			intent.putExtra("Bitmap", honasantooratabitmap);
+			startActivity(intent);
+			//done
 		} else if (((myAutoCompleteLoc.getText().toString()
 				.equals("HONNASAN HALL")) && (myAutoCompleteDir.getText()
 				.toString().equals("ORATA 2 BUILDING")))
 				|| ((myAutoCompleteDir.getText().toString()
 						.equals("HONNASAN HALL")) && (myAutoCompleteLoc
 						.getText().toString().equals("ORATA 2 BUILDING")))) {
-			Toast.makeText(getApplicationContext(), "no direction yet",
-					Toast.LENGTH_LONG).show();
+			Intent intent = new Intent();
+			intent.setClass(DirectionCampus.this, ImageViewingDirection.class);
+			intent.putExtra("Bitmap", honasantoorata2bitmap);
+			startActivity(intent);
+			//done
 		} else if (((myAutoCompleteLoc.getText().toString()
 				.equals("HONNASAN HALL")) && (myAutoCompleteDir.getText()
 				.toString().equals("NEW BUILDING")))
 				|| ((myAutoCompleteDir.getText().toString()
 						.equals("HONNASAN HALL")) && (myAutoCompleteLoc
 						.getText().toString().equals("NEW BUILDING")))) {
-			Toast.makeText(getApplicationContext(), "no direction yet",
-					Toast.LENGTH_LONG).show();
+			Intent intent = new Intent();
+			intent.setClass(DirectionCampus.this, ImageViewingDirection.class);
+			intent.putExtra("Bitmap", honasantonbbitmap);
+			startActivity(intent);
+			//done
 		} else if (((myAutoCompleteLoc.getText().toString()
 				.equals("HONNASAN HALL")) && (myAutoCompleteDir.getText()
 				.toString().equals("GYMNASIUM")))
 				|| ((myAutoCompleteDir.getText().toString()
 						.equals("HONNASAN HALL")) && (myAutoCompleteLoc
 						.getText().toString().equals("GYMNASIUM")))) {
-			Toast.makeText(getApplicationContext(), "no direction yet",
-					Toast.LENGTH_LONG).show();
+			Intent intent = new Intent();
+			intent.setClass(DirectionCampus.this, ImageViewingDirection.class);
+			intent.putExtra("Bitmap", honasantogymbitmap);
+			startActivity(intent);
+			//done
 		} else if (((myAutoCompleteLoc.getText().toString()
 				.equals("HONNASAN HALL")) && (myAutoCompleteDir.getText()
 				.toString().equals("BADAR BUILDING")))
 				|| ((myAutoCompleteDir.getText().toString()
 						.equals("HONNASAN HALL")) && (myAutoCompleteLoc
 						.getText().toString().equals("BADAR BUILDING")))) {
-			Toast.makeText(getApplicationContext(), "no direction yet",
-					Toast.LENGTH_LONG).show();
+			Intent intent = new Intent();
+			intent.setClass(DirectionCampus.this, ImageViewingDirection.class);
+			intent.putExtra("Bitmap", honasantobadarbitmap);
+			startActivity(intent);
+			//done
 		} else if (((myAutoCompleteLoc.getText().toString()
 				.equals("HONNASAN HALL")) && (myAutoCompleteDir.getText()
 				.toString().equals("AIRPLANE")))
 				|| ((myAutoCompleteDir.getText().toString()
 						.equals("HONNASAN HALL")) && (myAutoCompleteLoc
 						.getText().toString().equals("AIRPLANE")))) {
-			Toast.makeText(getApplicationContext(), "no direction yet",
-					Toast.LENGTH_LONG).show();
+			Intent intent = new Intent();
+			intent.setClass(DirectionCampus.this, ImageViewingDirection.class);
+			intent.putExtra("Bitmap", honasantoairbitmap);
+			startActivity(intent);
+			//done
 		} else if (((myAutoCompleteLoc.getText().toString()
 				.equals("HONNASAN HALL")) && (myAutoCompleteDir.getText()
 				.toString().equals("GREENHOME")))
 				|| ((myAutoCompleteDir.getText().toString()
 						.equals("HONNASAN HALL")) && (myAutoCompleteLoc
 						.getText().toString().equals("GREENHOME")))) {
-			Toast.makeText(getApplicationContext(), "no direction yet",
-					Toast.LENGTH_LONG).show();
+			Intent intent = new Intent();
+			intent.setClass(DirectionCampus.this, ImageViewingDirection.class);
+			intent.putExtra("Bitmap", honasantogreenbitmap);
+			startActivity(intent);
+			//done
 		} else if (((myAutoCompleteLoc.getText().toString()
 				.equals("HONNASAN HALL")) && (myAutoCompleteDir.getText()
 				.toString().equals("AMADEO PEREZ BUILDING")))
 				|| ((myAutoCompleteDir.getText().toString()
 						.equals("HONNASAN HALL")) && (myAutoCompleteLoc
 						.getText().toString().equals("AMADEO PEREZ BUILDING")))) {
-			Toast.makeText(getApplicationContext(), "no direction yet",
-					Toast.LENGTH_LONG).show();
+			Intent intent = new Intent();
+			intent.setClass(DirectionCampus.this, ImageViewingDirection.class);
+			intent.putExtra("Bitmap", honasantoamabitmap);
+			startActivity(intent);
+			//done
 		} else if (((myAutoCompleteLoc.getText().toString()
 				.equals("HONNASAN HALL")) && (myAutoCompleteDir.getText()
 				.toString().equals("AVR/ AUDIO VISUAL ROOM")))
 				|| ((myAutoCompleteDir.getText().toString()
 						.equals("HONNASAN HALL")) && (myAutoCompleteLoc
 						.getText().toString().equals("AVR/ AUDIO VISUAL ROOM")))) {
-			Toast.makeText(getApplicationContext(), "no direction yet",
-					Toast.LENGTH_LONG).show();
+			Intent intent = new Intent();
+			intent.setClass(DirectionCampus.this, ImageViewingDirection.class);
+			intent.putExtra("Bitmap", honasantoavrbitmap);
+			startActivity(intent);
+			
+			//done
 		} else if (((myAutoCompleteLoc.getText().toString()
 				.equals("HONNASAN HALL")) && (myAutoCompleteDir.getText()
 				.toString().equals("ARTS AND SCIENCES BUILDING 2")))
@@ -728,16 +790,22 @@ public class DirectionCampus extends Activity {
 						.equals("HONNASAN HALL")) && (myAutoCompleteLoc
 						.getText().toString()
 						.equals("ARTS AND SCIENCES BUILDING 2")))) {
-			Toast.makeText(getApplicationContext(), "no direction yet",
-					Toast.LENGTH_LONG).show();
+			Intent intent = new Intent();
+			intent.setClass(DirectionCampus.this, ImageViewingDirection.class);
+			intent.putExtra("Bitmap", honasantoarts2bitmap);
+			startActivity(intent);
+			//done
 		} else if (((myAutoCompleteLoc.getText().toString()
 				.equals("HONNASAN HALL")) && (myAutoCompleteDir.getText()
 				.toString().equals("ACCOUNTANCY BUILDING")))
 				|| ((myAutoCompleteDir.getText().toString()
 						.equals("HONNASAN HALL")) && (myAutoCompleteLoc
 						.getText().toString().equals("ACCOUNTANCY BUILDING")))) {
-			Toast.makeText(getApplicationContext(), "no direction yet",
-					Toast.LENGTH_LONG).show();
+			Intent intent = new Intent();
+			intent.setClass(DirectionCampus.this, ImageViewingDirection.class);
+			intent.putExtra("Bitmap", honasantoactbitmap);
+			startActivity(intent);
+			//done
 		} else if (((myAutoCompleteLoc.getText().toString()
 				.equals("HONNASAN HALL")) && (myAutoCompleteDir.getText()
 				.toString().equals("ARTS AND SCIENCES BUILDING")))
@@ -745,50 +813,66 @@ public class DirectionCampus extends Activity {
 						.equals("HONNASAN HALL")) && (myAutoCompleteLoc
 						.getText().toString()
 						.equals("ARTS AND SCIENCES BUILDING")))) {
-			Toast.makeText(getApplicationContext(), "no direction yet",
-					Toast.LENGTH_LONG).show();
+			Intent intent = new Intent();
+			intent.setClass(DirectionCampus.this, ImageViewingDirection.class);
+			intent.putExtra("Bitmap", honasantoartsbitmap);
+			startActivity(intent);
+			//done
 		} else if (((myAutoCompleteLoc.getText().toString()
 				.equals("HONNASAN HALL")) && (myAutoCompleteDir.getText()
 				.toString().equals("SCIENCE BUILDING")))
 				|| ((myAutoCompleteDir.getText().toString()
 						.equals("HONNASAN HALL")) && (myAutoCompleteLoc
 						.getText().toString().equals("SCIENCE BUILDING")))) {
-			Toast.makeText(getApplicationContext(), "no direction yet",
-					Toast.LENGTH_LONG).show();
-
+			Intent intent = new Intent();
+			intent.setClass(DirectionCampus.this, ImageViewingDirection.class);
+			intent.putExtra("Bitmap", honasantoscbitmap);
+			startActivity(intent);
+			//done
 		} else if (((myAutoCompleteLoc.getText().toString()
 				.equals("HONNASAN HALL")) && (myAutoCompleteDir.getText()
 				.toString().equals("READING CENTER")))
 				|| ((myAutoCompleteDir.getText().toString()
 						.equals("HONNASAN HALL")) && (myAutoCompleteLoc
 						.getText().toString().equals("READING CENTER")))) {
-			Toast.makeText(getApplicationContext(), "no direction yet",
-					Toast.LENGTH_LONG).show();
+			Intent intent = new Intent();
+			intent.setClass(DirectionCampus.this, ImageViewingDirection.class);
+			intent.putExtra("Bitmap", honasantoredbitmap);
+			startActivity(intent);
+			//done
 		} else if (((myAutoCompleteLoc.getText().toString()
 				.equals("HONNASAN HALL")) && (myAutoCompleteDir.getText()
 				.toString().equals("FOUR ROOMS BUILDING")))
 				|| ((myAutoCompleteDir.getText().toString()
 						.equals("HONNASAN HALL")) && (myAutoCompleteLoc
 						.getText().toString().equals("FOUR ROOMS BUILDING")))) {
-			Toast.makeText(getApplicationContext(), "no direction yet",
-					Toast.LENGTH_LONG).show();
+			Intent intent = new Intent();
+			intent.setClass(DirectionCampus.this, ImageViewingDirection.class);
+			intent.putExtra("Bitmap", honasantofourbitmap);
+			startActivity(intent);
+			//done
 		} else if (((myAutoCompleteLoc.getText().toString()
 				.equals("HONNASAN HALL")) && (myAutoCompleteDir.getText()
 				.toString().equals("GREENHOME 2")))
 				|| ((myAutoCompleteDir.getText().toString()
 						.equals("HONNASAN HALL")) && (myAutoCompleteLoc
 						.getText().toString().equals("GREENHOME 2")))) {
-			Toast.makeText(getApplicationContext(), "no direction yet",
-					Toast.LENGTH_LONG).show();
-
+			Intent intent = new Intent();
+			intent.setClass(DirectionCampus.this, ImageViewingDirection.class);
+			intent.putExtra("Bitmap", honasantogreen2bitmap);
+			startActivity(intent);
+			//done
 		} else if (((myAutoCompleteLoc.getText().toString()
 				.equals("HONNASAN HALL")) && (myAutoCompleteDir.getText()
 				.toString().equals("ENGINEERING LABORATORY")))
 				|| ((myAutoCompleteDir.getText().toString()
 						.equals("HONNASAN HALL")) && (myAutoCompleteLoc
 						.getText().toString().equals("ENGINEERING LABORATORY")))) {
-			Toast.makeText(getApplicationContext(), "no direction yet",
-					Toast.LENGTH_LONG).show();
+			Intent intent = new Intent();
+			intent.setClass(DirectionCampus.this, ImageViewingDirection.class);
+			intent.putExtra("Bitmap", honasantoengbitmap);
+			startActivity(intent);
+			//done
 		}
 	}
 
